@@ -2,12 +2,12 @@ import React from "react";
 
 function WhyBahojuMart() {
   return (
-    <section className="max-w-7xl pl-[10%] px-6 py-5 relative">
+    <section className="max-w-7xl pl-[10%] px-6 py-5 relative lato-regular">
       {/* Header */}
       <div className="mb-9xl lg:pb-30 pb-10">
-        <span className="text-sm text-gray-400 block mb-2">— Explore</span>
-        <h2 className="text-3xl font-semibold mb-4">Why Bahoju Mart?</h2>
-        <p className="max-w-xl  text-gray-500 text-sm ">
+        <span className="text-sm text-gray-400 block mb-2 lato-regular">— Explore</span>
+        <h2 className="text-3xl font-semibold mb-4 lato-bold">Why Bahoju Mart?</h2>
+        <p className="max-w-xl  text-gray-500 text-sm lato-regular">
           Every ride is supported by real-time tracking, verified vendors, and
           emergency systems that create a safer, more transparent experience for
           everyone on the platform.

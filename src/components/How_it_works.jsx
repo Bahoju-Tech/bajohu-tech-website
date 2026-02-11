@@ -34,11 +34,11 @@ const steps = [
 
 function How_it_works() {
   return (
-   <section className="max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-20">
+   <section className="max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-20 lato-regular">
 
   {/* HEADER */}
   <div className="text-center mb-12 sm:mb-16" data-aos="fade-up" data-aos-delay="200">
-    <h2 className="text-[28px] sm:text-[34px] lg:text-[40px] font-bold mb-4">
+    <h2 className="text-[28px] sm:text-[34px] lg:text-[40px] font-bold mb-4 lato-bold">
       How it works
     </h2>
 

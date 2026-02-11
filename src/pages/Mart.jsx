@@ -25,7 +25,7 @@ function Mart() {
   }, []);
 
   return (
-    <div>
+    <div className="lato-regular">
       <Navbar />
 
       {/* ================= HERO SECTION ================= */}

@@ -42,10 +42,10 @@ function Faq() {
   };
 
   return (
-    <section className="bg-white py-20 px-4">
-      <div className="max-w-4xl mx-auto">
+    <section className="bg-white py-20 px-4 lato-regular">
+      <div className="max-w-4xl mx-auto lato-regular">
         {/* Heading */}
-        <h2 className="text-3xl md:text-4xl font-semibold text-center text-gray-900">
+        <h2 className="text-3xl md:text-4xl font-semibold text-center text-gray-900 lato-bold">
           Frequently asked questions
         </h2>
         <p className="text-center text-gray-500 mt-2 mb-12">

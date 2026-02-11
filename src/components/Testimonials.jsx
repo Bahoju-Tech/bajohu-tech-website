@@ -106,8 +106,8 @@ function Testimonials() {
   };
 
   return (
-    <section className="relative lg:py-32 md:py-20 bg-white overflow-hidden ">
-  <h2 className="text-center text-[40px] sm:text-[40px] md:text-[45px] font-bold mb-30 md:mb-16 ">
+    <section className="relative lg:py-32 md:py-20 bg-white overflow-hidden lato-regular">
+  <h2 className="text-center text-[40px] sm:text-[40px] md:text-[45px] font-bold mb-30 md:mb-16 lato-bold">
     Testimonials
   </h2>
 

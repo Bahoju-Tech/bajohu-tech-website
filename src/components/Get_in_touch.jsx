@@ -7,10 +7,10 @@ import {
 
 function Get_in_touch() {
   return (
-    <section className="max-w-6xl mx-auto px-1 py-10 mb-24">
+    <section className="max-w-6xl mx-auto px-1 py-10 mb-24 lato-regular">
       {/* Card */}
-      <div className="bg-white rounded-2xl shadow-[0_0_10px_rgba(0,0,0,0.1)] p-12 max-w-4xl mx-auto">
-        <h2 className="text-3xl font-semibold mb-8">
+      <div className="bg-white rounded-2xl shadow-[0_0_10px_rgba(0,0,0,0.1)] p-12 max-w-4xl mx-auto lato-regular">
+        <h2 className="text-3xl font-semibold mb-8 lato-bold">
           Get in Touch
         </h2>
 

@@ -18,7 +18,7 @@ import Footer from "../components/Footer";
 
 function Home() {
   return (
-    <div>
+    <div className="lato-regular">
       <Hero />
       <About />
       <Values />

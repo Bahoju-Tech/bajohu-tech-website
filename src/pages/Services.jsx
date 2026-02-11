@@ -53,7 +53,7 @@ function Services() {
     return `translateY(${translateY}px) scale(${scale})`;
   };
   return (
-    <div className="bg-black overflow-x-hidden">
+    <div className="bg-black overflow-x-hidden lato-regular">
       <Navbar />
 
       {/* ================= HERO SECTION ================= */}

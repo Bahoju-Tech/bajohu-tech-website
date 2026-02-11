@@ -23,7 +23,7 @@ function Ride() {
   }, []);
 
   return (
-    <div>
+    <div className="lato-regular">
       <Navbar />
 
       {/* Hero Section */}
@@ -107,7 +107,7 @@ function Ride() {
           <div 
             className="absolute bottom-16 -right-3 bg-[#00756F] text-white shadow-lg px-4 py-2 rounded-lg text-sm flex items-center gap-2"
             data-aos="zoom-in"
-            data-aos-delay="1200"
+            data-aos-delay="1000"
           >
             <span className="rounded-full fill-white" />
             {<FaCheckCircle />}Earn More Money by Driving
