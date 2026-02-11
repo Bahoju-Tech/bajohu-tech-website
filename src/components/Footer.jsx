@@ -37,13 +37,13 @@ function Footer() {
   return (
     <footer
       ref={footerRef}
-      className={`bg-black text-gray-300 pt-20 pb-10 px-4 transition-all duration-700 ease-out
+      className={`bg-black text-gray-300 pt-20 pb-10 px-2 transition-all duration-700 ease-out
         ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"}
       `}
     >
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl lg:mx-auto ">
         {/* Top section */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 items-start">
           {/* Logo */}
           <div>
             <Link
@@ -61,9 +61,9 @@ function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-white mb-4">Contact Info</h4>
+            <h4 className="text-white mb-2">Contact Info</h4>
 
-            <ul className="space-y-2 text-sm">
+            <ul className="space-y-5 text-xs">
               <li>
                 <a
                   href="mailto:info@bahojutech.com"
@@ -91,7 +91,7 @@ function Footer() {
                   rel="noopener noreferrer"
                   className="group inline-block relative hover:text-white transition"
                 >
-                  44 Community Road, Off Allen Ikeja
+                  44 Community Road, <br />Off Allen Ikeja
                   <span className="absolute left-0 -bottom-0.5 h-[1px] w-0 bg-white transition-all duration-300 group-hover:w-full" />
                 </a>
               </li>
@@ -100,8 +100,8 @@ function Footer() {
 
           {/* Socials */}
           <div>
-            <h4 className="text-white  mb-4">Socials</h4>
-            <ul className="space-y-2 text-sm">
+            <h4 className="text-white mb-2">Socials</h4>
+            <ul className="space-y-4 text-xs">
               <li>
                 <a 
                 href="https://www.instagram.com/bahojutech" 
@@ -141,26 +141,26 @@ function Footer() {
           </div>
 
           {/* Newsletter */}
-         <div>
-  <h4 className="text-white mb-4">
+         <div className="">
+  <h4 className="text-white mb-2 lato-semibold">
     Subscribe to our newsletter
   </h4>
 
-  <p className="text-sm mb-4 leading-relaxed">
+  <p className="text-xs mb-4 leading-relaxed lato-regular">
     Join our community and stay connected to the future of technology
     and urban living. Get exclusive updates on our tech services,
     learning programs, ride solutions, and marketplace offerings.
   </p>
 
   {/* Input + Button */}
- <div className="flex items-center gap-2">
+ <div className="flex justify-center gap-2">
           <input
             type="email"
             placeholder="Your email address..."
-            className="flex-1 h-11 px-4 rounded-md bg-white text-gray-900 text-sm focus:outline-none"
+            className="flex-1 h-9 px-4 rounded-md bg-white text-gray-900 text-sm focus:outline-none"
           />
 
-          <button className="h-11 px-4 rounded-md bg-[#0A6D8C] text-white text-sm">
+          <button className="h-9 px-4 rounded-md bg-[#0A6D8C] text-white text-sm">
             Subscribe
           </button>
         </div>

@@ -78,7 +78,7 @@ function Explore() {
   return (
  <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
   {/* Section header */}
-  <span className="text-sm text-gray-400 flex items-center gap-2">
+  <span className="text-md text-gray-400 flex items-center gap-2 italic">
     <span className="w-6 h-[1px] bg-gray-400"></span>
     Explore
   </span>
@@ -96,13 +96,13 @@ function Explore() {
           setActiveCategory(cat);
           setExpanded(false);
         }}
-        className={`transition ${
+        className={`transition cursor-pointer ${
           activeCategory === cat
             ? "text-blue-600 font-medium"
             : "text-gray-500 hover:text-black"
         }`}
       >
-        {cat}
+        
       </button>
     ))}
   </div>
@@ -112,7 +112,7 @@ function Explore() {
     {visiblePosts.map((post) => (
       <div
         key={post.id}
-        className="bg-white rounded-xl overflow-hidden hover:shadow-md transition"
+        className="bg-white rounded-xl overflow-hidden hover:shadow-md transition cursor-pointer"
       >
         <img
           src={post.image}
@@ -125,11 +125,11 @@ function Explore() {
             {post.date}
           </p>
 
-          <h3 className="font-semibold text-sm sm:text-base mb-2 leading-snug">
+          <h3 className="lato-semibold text-sm sm:text-base mb-2 leading-snug">
             {post.title}
           </h3>
 
-          <p className="text-xs sm:text-sm text-gray-500">
+          <p className="lato-regular text-xs sm:text-sm text-gray-500">
             {post.excerpt}
           </p>
         </div>
@@ -139,12 +139,12 @@ function Explore() {
 
   {/* View more */}
   {filteredPosts.length > 4 && (
-    <div className="mt-10 sm:mt-12 text-center">
+    <div className="mt-10 sm:mt-12 text-center lato-bold">
       <button
         onClick={() => setExpanded((prev) => !prev)}
-        className="text-blue-600 hover:underline transition text-sm sm:text-base"
+        className="text-[#52525B] hover:underline transition text-sm sm:text-base cursor-pointer"
       >
-        {expanded ? "View less" : "View more"}
+        {expanded ? "View Less" : "View More"}
       </button>
     </div>
   )}

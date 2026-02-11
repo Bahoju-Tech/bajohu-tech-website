@@ -34,18 +34,18 @@ function Hero() {
         style={{
           opacity: isVisible ? 1 : 0,
           transform: isVisible ? 'translateY(0)' : 'translateY(30px)',
-          transitionDelay: '200ms'
+          transitionDelay: '0ms'
         }}
       >
         Multiple Global Tech Solutions
       </h2>
 
       <p 
-        className="lato-regular text-white text-[16px] sm:text-[17px] lg:text-[19px] mt-7 max-w-3xl transition-all duration-1000 ease-out"
+        className="lato-light text-white text-[14px] sm:text-[15px] lg:text-[19px] mt-7 max-w-3xl transition-all duration-1000 ease-out"
         style={{
           opacity: isVisible ? 1 : 0,
           transform: isVisible ? 'translateY(0)' : 'translateY(30px)',
-          transitionDelay: '400ms'
+          transitionDelay: '100ms'
         }}
       >
        From enterprise software and cloud infrastructure to safe mobility, e-commerce systems, 

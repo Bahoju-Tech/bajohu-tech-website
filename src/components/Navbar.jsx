@@ -23,16 +23,15 @@ function Navbar() {
           
           {[
             { name: "Home", path: "/" },
-            
             { name: "Ride", path: "/ride" },
             { name: "Features", path: "/ride/features" },
             { name: "Blog", path: "/blog" },
-            { name: "Careers", path: "#" },
+        
           ].map((item) => (
             <Link
               key={item.name}
               to={item.path}
-              className={`text-[16px] transition relative group ${
+              className={`text-[16px] transition relative group cursor-pointer ${
                 location.pathname === item.path
                   ? "text-blue-400"
                   : "text-white hover:text-gray-300"
@@ -56,7 +55,7 @@ function Navbar() {
         {/* Hamburger (Mobile Only) */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="lg:hidden text-white text-2xl"
+          className="lg:hidden text-white text-2xl cursor-pointer"
         >
           <RxHamburgerMenu />
         </button>
@@ -75,13 +74,13 @@ function Navbar() {
       { name: "About Us", path: "/about-us" },
       { name: "Products", path: "/products" },
       { name: "Blog", path: "/blog" },
-      { name: "Careers", path: "#" },
+      
     ].map((item) => (
       <Link
         key={item.name}
         to={item.path}
         onClick={() => setMobileOpen(false)}
-        className={`text-lg transition relative group ${
+        className={`text-lg transition relative group cursor-pointer ${
           location.pathname === item.path
             ? "text-blue-400"
             : "text-white hover:text-gray-300"

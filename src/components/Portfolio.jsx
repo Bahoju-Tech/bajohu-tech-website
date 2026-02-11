@@ -17,11 +17,11 @@ function Portfolio() {
         <div className="flex flex-col-reverse lg:flex-row items-center gap-8 lg:gap-20 lg:min-h-[500px]">
           
           {/* IMAGE - TOP ON MOBILE, RIGHT ON DESKTOP */}
-          <div className="w-full lg:w-2/5 flex justify-center lg:justify-end order-1 lg:order-2">
+          <div className="w-full lg:w-2/5 flex justify-center lg:justify-end order-1 lg:order-2 mt-8 lg:mt-0">
             <img
               src={portfolioImg}
               alt="Company Portfolio"
-              className="w-[200px] sm:w-[280px] md:w-[320px] lg:w-[300px] xl:w-[700px]"
+              className="w-[700px] sm:w-[480px] md:w-[520px] lg:w-[300px] xl:w-[700px]"
             />
           </div>
 
@@ -40,13 +40,13 @@ function Portfolio() {
             </h2>
 
             {/* Paragraph - Desktop absolute, Mobile normal */}
-            <p className="text-gray-300 text-[12px] sm:text-[13px] md:text-[14px] lg:text-[18px] leading-relaxed max-w-lg mb-8 lg:mb-0 lg:absolute lg:top-22 lg:left-0 lg:px-0 lg:-translate-y-55 lg:translate-x-20">
+            <p className="text-gray-300 text-[12px] sm:text-[13px] md:text-[14px] lg:text-[17px] leading-relaxed max-w-lg mb-8 lg:mb-0 lg:absolute lg:top-22 lg:left-0 lg:px-0 lg:-translate-y-55 lg:translate-x-10">
               Explore our portfolio to see the quality, creativity, and impact behind our work. 
               Each project reflects our commitment to thoughtful design and reliable technology. Discover how we turn ideas into meaningful, scalable solutions. Let our work show what we can build together.
             </p>
 
             {/* Button - Desktop absolute, Mobile normal */}
-            <button className="inline-flex items-center gap-2 bg-[#0A6D8C] hover:bg-[#095c75] transition-all duration-300 text-white text-sm px-6 py-3 lg:px-6 lg:py-4 rounded-xl font-medium lg:absolute lg:top-56 lg:left-0 lg:translate-x-20 lg:-translate-y-45">
+            <button className="inline-flex items-center gap-2 bg-[#0A6D8C] hover:bg-[#095c75] transition-all duration-300 text-white text-xs px-6 py-3 lg:px-4 lg:py-2 rounded-xl font-medium lg:absolute lg:top-56 lg:left-0 lg:translate-x-10 lg:-translate-y-45">
               View Portfolio
               <FaArrowRight />
             </button>

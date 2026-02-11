@@ -127,7 +127,7 @@ function About() {
       style={{
         opacity: isVisible ? 1 : 0,
         transform: isVisible ? 'translateX(0)' : 'translateX(-50px)',
-        transitionDelay: '1000ms'
+        transitionDelay: '300ms'
       }}
     >
       <img
@@ -138,17 +138,17 @@ function About() {
     </div>
 
     <div 
-      className="w-full lg:w-1/2 text-left transition-all duration-1000 ease-out"
+      className="w-full lg:w-1/2 text-left transition-all duration-1000 ease-out space-y-6"
       style={{
         opacity: isVisible ? 1 : 0,
         transform: isVisible ? 'translateX(0)' : 'translateX(50px)',
-        transitionDelay: '1200ms'
+        transitionDelay: '400ms'
       }}
     >
-      <h2 className="lato-bold text-[26px] sm:text-[28px] lg:text-[32px]">
+      <h2 className="lato-bold text-[26px] sm:text-[28px] lg:text-[32px] mb-6">
         Our Team
       </h2>
-      <p className="lato-regular text-[#52525B] text-[15px] sm:text-[16px] lg:text-[17px] mt-4" >
+      <p className="lato-regular text-[#52525B] text-[15px] sm:text-[16px] lg:text-[17px] leading-loose " >
         At Bahoju, our experienced and dedicated team forms the cornerstone of our client-centric approach. 
         We are deeply committed to understanding your business objectives and providing the support you need to thrive. 
         <br />

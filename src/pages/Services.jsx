@@ -187,12 +187,12 @@ function Services() {
           efficiency for business and individuals.
         </p>
 
-        <ul className="space-y-3 sm:space-y-4 text-gray-300 text-[14px] sm:text-[15px] md:text-[16px] max-w-md mx-auto lg:mx-0">
+        <ul className="space-y-4 sm:space-y-4 text-gray-300 text-[14px] sm:text-[13px] md:text-[16px] max-w-md mx-auto lg:mx-0">
           <li className="flex items-start gap-3 transition-all duration-700 ease-in-out group-hover:translate-x-2">
             <span className="text-[#007CBA] mt-[2px] transition-all duration-700 ease-in-out group-hover:text-cyan-400 group-hover:scale-125"><MdDone /></span>
             <span className="transition-all duration-700 ease-in-out group-hover:text-white">AWS, Azure, and Google Cloud Management</span>
           </li>
-          <li className="flex items-start gap-3 transition-all duration-700 ease-in-out group-hover:translate-x-2">
+          <li className="flex items-start gap-3 transition-all duration-700 ease-in-out group-hover:translate-x-2 text-left">
             <span className="text-[#007CBA] mt-[2px] transition-all duration-700 ease-in-out group-hover:text-cyan-400 group-hover:scale-125"><MdDone /></span>
             <span className="transition-all duration-700 ease-in-out group-hover:text-white">Seamless DevOps Automation and Continuous Integration</span>
           </li>
@@ -204,7 +204,7 @@ function Services() {
 
           <li className="flex items-start gap-3 transition-all duration-700 ease-in-out group-hover:translate-x-2">
             <span className="text-[#007CBA] mt-[2px] transition-all duration-700 ease-in-out group-hover:text-cyan-400 group-hover:scale-125"><MdDone /></span>
-            <span className="transition-all duration-700 ease-in-out group-hover:text-white">Scalable,Secure and High-Performance cloud Solutions</span>
+            <span className="transition-all duration-700 ease-in-out group-hover:text-white text-left">Scalable,Secure and High-Performance cloud Solutions</span>
           </li>
         </ul>
 
@@ -477,7 +477,7 @@ function Services() {
           and optimized for performance.
         </p>
 
-        <ul className="space-y-3 sm:space-y-4 text-gray-300 text-[14px] sm:text-[15px] md:text-[16px] max-w-md mx-auto lg:mx-0">
+        <ul className="space-y-3 sm:space-y-4 text-gray-300 text-[13px] sm:text-[15px] md:text-[16px] max-w-md mx-auto lg:mx-0">
           <li className="flex items-start gap-3">
             <span className="text-[#007CBA] mt-[2px]"><MdDone /></span>
             24/7 Operational Support
