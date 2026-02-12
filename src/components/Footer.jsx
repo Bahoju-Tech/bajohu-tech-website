@@ -9,36 +9,36 @@ function Footer() {
   const location = useLocation();
 
   // Animate footer on scroll into view
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setVisible(true);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.2 }
-    );
+  // useEffect(() => {
+  //   const observer = new IntersectionObserver(
+  //     ([entry]) => {
+  //       if (entry.isIntersecting) {
+  //         setVisible(true);
+  //         observer.disconnect();
+  //       }
+  //     },
+  //     { threshold: 0.2 }
+  //   );
 
-    if (footerRef.current) {
-      observer.observe(footerRef.current);
-    }
+  //   if (footerRef.current) {
+  //     observer.observe(footerRef.current);
+  //   }
 
-    return () => observer.disconnect();
-  }, []);
+  //   return () => observer.disconnect();
+  // }, []);
 
   // Scroll to top when logo is clicked
-  const handleLogoClick = () => {
-    if (location.pathname === "/") {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
-  };
+  // const handleLogoClick = () => {
+  //   if (location.pathname === "/") {
+  //     window.scrollTo({ top: 0, behavior: "smooth" });
+  //   }
+  // };
 
   return (
     <footer
       ref={footerRef}
-      className={`bg-black text-gray-300 pt-20 pb-10 px-2 transition-all duration-700 ease-out
-        ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"}
+      className={`bg-black text-gray-300 pt-20 pb-20 px-2 transition-all duration-700 ease-out
+        
       `}
     >
       <div className="max-w-7xl lg:mx-auto ">
@@ -48,7 +48,7 @@ function Footer() {
           <div>
             <Link
               to="/"
-              onClick={handleLogoClick}
+              // onClick={handleLogoClick}
               className="inline-block mb-4"
             >
               <img
