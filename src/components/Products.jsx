@@ -85,7 +85,7 @@ function Products() {
   };
 
   return (
-    <section id="products" className="max-w-7xl lg:mx-auto lg:px-12 sm:px-0 py-24">
+    <section id="products" className="max-w-7xl lg:mx-auto lg:px-12 sm:px-0 px-1 py-24">
       {/* Section header */}
       {/* <span className="text-sm text-gray-400">—— Explore</span> */}
       <h2 className="text-4xl font-bold mt-2 mb-10">Our Products</h2>

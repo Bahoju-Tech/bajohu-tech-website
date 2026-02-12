@@ -17,7 +17,7 @@ function Portfolio() {
         <div className="flex flex-col-reverse lg:flex-row items-center gap-8 lg:gap-20 lg:min-h-[500px]">
           
           {/* IMAGE - TOP ON MOBILE, RIGHT ON DESKTOP */}
-          <div className="w-full lg:w-2/5 flex justify-center lg:justify-end order-1 lg:order-2 mt-8 lg:mt-0">
+          <div className="w-full lg:w-2/5 flex justify-center lg:justify-end order-1 lg:order-2 mt-8 lg:mt-0 sm:mt-23">
             <img
               src={portfolioImg}
               alt="Company Portfolio"
