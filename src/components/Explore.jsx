@@ -80,15 +80,15 @@ function Explore() {
   {/* Section header */}
   <span className="text-md text-gray-400 flex items-center gap-2 italic">
     <span className="w-6 h-[1px] bg-gray-400"></span>
-    Explore
+    {/* Explore */}
   </span>
 
-  <h2 className="text-[32px] sm:text-[40px] lg:text-[56px] font-bold mt-2">
-    Our Blog
-  </h2>
+  <h4 className="text-[32px] sm:text-[40px] lg:text-[56px] font-bold mt-2 text-center">
+    COMING SOON
+  </h4>
 
   {/* Categories */}
-  <div className="flex gap-4 sm:gap-6 lg:gap-6 mt-8 sm:mt-10 mb-10 text-sm sm:text-base lg:text-xl overflow-x-auto whitespace-nowrap scrollbar-hide">
+  {/* <div className="flex gap-4 sm:gap-6 lg:gap-6 mt-8 sm:mt-10 mb-10 text-sm sm:text-base lg:text-xl overflow-x-auto whitespace-nowrap scrollbar-hide">
     {categories.map((cat) => (
       <button
         key={cat}
@@ -105,10 +105,10 @@ function Explore() {
         
       </button>
     ))}
-  </div>
+  </div> */}
 
   {/* Blog cards */}
-  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+  {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
     {visiblePosts.map((post) => (
       <div
         key={post.id}
@@ -135,10 +135,10 @@ function Explore() {
         </div>
       </div>
     ))}
-  </div>
+  </div> */}
 
   {/* View more */}
-  {filteredPosts.length > 4 && (
+  {/* {filteredPosts.length > 4 && (
     <div className="mt-10 sm:mt-12 text-center lato-bold">
       <button
         onClick={() => setExpanded((prev) => !prev)}
@@ -147,7 +147,7 @@ function Explore() {
         {expanded ? "View Less" : "View More"}
       </button>
     </div>
-  )}
+  )} */}
 </section>
 
   );

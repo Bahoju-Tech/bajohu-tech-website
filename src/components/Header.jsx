@@ -76,7 +76,7 @@ function Header() {
 
         </nav>
 
-          <div className="hidden md:flex">
+          <div className="hidden md:flex text-white">
             <Link to="/contact-us">
             <Button icon={<FaArrowRightLong />}>Contact Us</Button>
           </Link>
