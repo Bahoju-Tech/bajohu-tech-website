@@ -13,16 +13,7 @@ import axios from "axios";
 
 
 function App() {
-  const [count, setCount] = useState(0);
-  useEffect(() => {
-   const  fetchApi = async () => {
-    const res = await fetch("https://bahojutech-backend.onrender.com");
-    const data = await res.json();
-    console.log(data);
   
-  };
-  fetchApi();
-  }, []);
   return (
     <Router>
       <ScrollToTop />
