@@ -1,6 +1,12 @@
 import React, { useState, useEffect } from "react";
+
 import digitalImg from "../assets/digital.png";
+
 import { Link } from "react-router-dom";
+
+import blogImg from "../assets/services_img.png";
+
+import axios from "axios";
 
 const Explore = () => {
   const [featuredPost, setFeaturedPost] = useState(null);
@@ -16,11 +22,13 @@ const Explore = () => {
   // API endpoints - replace with your actual backend URLs
 
   const API_ENDPOINTS = {
-    featured: "/api/blog/featured",
+    featured: "/api/blog/featured/posts",
 
     tagged: "/api/blog/tagged",
 
     posts: "/api/blog/posts",
+
+    categories: "/api/blog/categories/list",
   };
 
   // Mock data for development/testing
@@ -29,56 +37,51 @@ const Explore = () => {
     featured: {
       id: 1,
 
-      title: "Software Development vs UI/UX Design: Which Should You Choose?",
+      title: "Bahoju Tech: Leading Digital Innovation in 2026",
 
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "Discover how Bahoju Tech is revolutionizing the tech industry with cutting-edge solutions in digital transformation, cloud computing, and AI-driven applications. Our comprehensive approach helps businesses thrive in the digital age.",
 
-      image: digitalImg,
+      image: blogImg,
 
-      slug: "software-development-vs-uiux-design",
+      slug: "bahoju-tech-digital-innovation-2026",
     },
 
     tagged: [
       {
         id: 1,
 
-        title: "Frontend Development Best Practices",
+        title: "Bahoju Tech's Software Development Services",
 
-        excerpt:
-          "Learn modern frontend development techniques and best practices.",
+        excerpt: "Custom software solutions tailored to your business needs.",
 
-        date: "February 13, 2026",
+        date: "February 15, 2026",
 
-        views: "1.2k",
+        views: "2.1k",
       },
 
       {
         id: 2,
 
-        title: "UI/UX Design Principles",
+        title: "Cloud Solutions by Bahoju Tech",
 
-        excerpt:
-          "Essential design principles for creating user-friendly interfaces.",
+        excerpt: "Scalable cloud infrastructure for growing businesses.",
 
-        date: "February 13, 2026",
+        date: "February 14, 2026",
 
-        views: "1.2k",
+        views: "1.8k",
       },
 
-          
-      
       {
-        id: 8,
+        id: 3,
 
-        title: "React vs Vue Comparison",
+        title: "Bahoju Tech's Mobile Development Expertise",
 
-        excerpt:
-          "Compare React and Vue frameworks for your next project.",
+        excerpt: "Native and cross-platform mobile app development.",
 
         date: "February 13, 2026",
 
-        views: "1.2k",
+        views: "1.9k",
       },
     ],
 
@@ -86,20 +89,20 @@ const Explore = () => {
       {
         id: 1,
 
-        title: "The Role of Data Science in Business Growth",
+        title: "Bahoju Tech's Digital Transformation Solutions",
 
         excerpt:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          "How Bahoju Tech helps businesses transition to digital platforms with cutting-edge technology solutions.",
 
-        image: "/api/placeholder/400/360",
+        image: blogImg,
 
-        date: "February 13, 2026",
+        date: "February 15, 2026",
 
-        views: "1.2k",
+        views: "2.1k",
 
         likes: "245",
 
-        slug: "data-science-business-growth",
+        slug: "bahoju-tech-digital-transformation",
 
         showDimensions: false,
       },
@@ -107,20 +110,20 @@ const Explore = () => {
       {
         id: 2,
 
-        title: "The Role of Data Science in Business Growth",
+        title: "Cloud Computing Services by Bahoju Tech",
 
         excerpt:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          "Explore Bahoju Tech's comprehensive cloud solutions for modern businesses.",
 
-        image: "/api/placeholder/400/360",
+        image: blogImg,
 
-        date: "February 13, 2026",
+        date: "February 14, 2026",
 
-        views: "1.2k",
+        views: "1.8k",
 
         likes: "189",
 
-        slug: "data-science-business-growth-2",
+        slug: "bahoju-tech-cloud-services",
 
         showDimensions: false,
       },
@@ -128,20 +131,20 @@ const Explore = () => {
       {
         id: 3,
 
-        title: "The Role of Data Science in Business Growth",
+        title: "Bahoju Tech's Web Development Expertise",
 
         excerpt:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          "Building responsive and scalable websites with Bahoju Tech's development team.",
 
-        image: "/api/placeholder/400/360",
+        image: blogImg,
 
         date: "February 13, 2026",
 
-        views: "1.2k",
+        views: "1.5k",
 
         likes: "312",
 
-        slug: "data-science-business-growth-3",
+        slug: "bahoju-tech-web-development",
 
         showDimensions: false,
       },
@@ -149,24 +152,31 @@ const Explore = () => {
       {
         id: 4,
 
-        title: "Responsive Design Principles",
+        title: "Mobile App Development with Bahoju Tech",
 
         excerpt:
-          "Master responsive design techniques for all device types, lorem  ",
+          "Creating innovative mobile applications that drive business growth.",
 
-        image: digitalImg,
+        image: blogImg,
 
-        date: "February 13, 2026",
+        date: "February 12, 2026",
 
         views: "1.9k",
 
         likes: "167",
 
-        slug: "responsive-design-principles",
+        slug: "bahoju-tech-mobile-apps",
 
         showDimensions: false,
       },
     ],
+    
+    categories: [
+      { id: 1, name: "BahojuTech", count: 8 },
+      { id: 2, name: "BahojuInstitutes", count: 5 },
+      { id: 3, name: "BahojuRide", count: 3 },
+      { id: 4, name: "BahojuMart", count: 4 }
+    ]
   };
 
   useEffect(() => {
@@ -175,30 +185,51 @@ const Explore = () => {
         setLoading(true);
 
         try {
-          const [featuredRes, taggedRes, postsRes] = await Promise.all([
+          const [featuredRes, taggedRes, postsRes, categoriesRes] = await Promise.all([
             fetch(API_ENDPOINTS.featured),
+
             fetch(API_ENDPOINTS.tagged),
+
             fetch(API_ENDPOINTS.posts),
+
+            fetch(API_ENDPOINTS.categories),
+
+            
           ]);
 
-          if (!featuredRes.ok || !taggedRes.ok || !postsRes.ok) {
+          if (!featuredRes.ok || !taggedRes.ok || !postsRes.ok || !categoriesRes.ok) {
             throw new Error("Failed to fetch blog data");
           }
 
-          const [featuredData, taggedData, postsData] = await Promise.all([
+          const [featuredData, taggedData, postsData, categoriesData] = await Promise.all([
             featuredRes.json(),
+
             taggedRes.json(),
+
             postsRes.json(),
+
+            categoriesRes.json(),
           ]);
 
           setFeaturedPost(featuredData);
+
           setTaggedPosts(taggedData);
+
           setBlogPosts(postsData);
+
+          setCategories(categoriesData);
+
+
         } catch (apiError) {
           console.warn("Using mock data:", apiError.message);
+
           setFeaturedPost(mockData.featured);
+
           setTaggedPosts(mockData.tagged);
+
           setBlogPosts(mockData.posts);
+
+          setCategories(mockData.categories);
         }
       } catch (err) {
         setError(err.message);
@@ -217,8 +248,10 @@ const Explore = () => {
       <div className="min-h-screen bg-[#F4F4F4] py-12">
         <div className="max-w-6xl mx-auto px-6 animate-pulse">
           <div className="h-8 bg-gray-300 w-64 mb-6 rounded"></div>
+
           <div className="grid lg:grid-cols-3 gap-8">
             <div className="lg:col-span-2 h-96 bg-gray-300 rounded-xl"></div>
+
             <div className="space-y-4">
               {[1, 2, 3].map((i) => (
                 <div key={i} className="h-24 bg-gray-300 rounded-xl"></div>
@@ -237,6 +270,7 @@ const Explore = () => {
       <div className="min-h-screen bg-[#F4F4F4] py-12">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-red-600 text-xl mb-4">Error loading content</h2>
+
           <p>{error}</p>
         </div>
       </div>
@@ -249,16 +283,19 @@ const Explore = () => {
     <div className="bg-[#F4F4F4] min-h-screen py-12">
       <div className="max-w-6xl mx-auto px-6">
         {/* ===== FEATURED + TAGGED ===== */}
+
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-20">
           {/* FEATURED */}
+
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-12">
               <span className="w-9 h-[1px] bg-gray-400"></span>
+
               <p className="text-sm tracking-widest text-gray-500">
                 MAIN FEATURED POST
               </p>
             </div>
-        
+
             <h2 className="text-[38px] font-semibold text-gray-800 mb-6">
               {featuredPost?.title}
             </h2>
@@ -274,7 +311,8 @@ const Explore = () => {
 
                   <div className=" pt-4">
                     <p className="text-xs text-gray-400 mb-2">
-                      {featuredPost.date} February 18, 2026 | {featuredPost.views}
+                      {featuredPost.date} February 18, 2026 |{" "}
+                      {featuredPost.views}
                       2.1k views
                     </p>
 
@@ -288,6 +326,7 @@ const Explore = () => {
           </div>
 
           {/* TAGGED BLOG */}
+
           <div className="relative mt-23">
             <p className="text-sm tracking-widest text-gray-500 mb-12 lato-regular">
               TAGGED BLOG
@@ -297,7 +336,9 @@ const Explore = () => {
               className="max-h-[500px] overflow-y-auto space-y-7 pl-4 "
               style={{
                 direction: "rtl",
+
                 scrollbarWidth: "thin",
+
                 scrollbarColor: "#005F87 transparent",
               }}
             >
@@ -326,6 +367,7 @@ const Explore = () => {
         </div>
 
         {/* ===== BLOG GRID ===== */}
+
         <h2 className="text-[41px] lato-bold text-gray-800 mt-21 mb-8">
           Blog Post
         </h2>
@@ -338,7 +380,7 @@ const Explore = () => {
             >
               <div className="relative">
                 <img
-                  src={digitalImg}
+                  src={blogImg}
                   alt={post.title}
                   className="w-full h-[150px] object-cover rounded-md "
                 />
@@ -355,13 +397,18 @@ const Explore = () => {
                   {post.title}
                 </h3>
 
-                <p className="text-sm text-gray-500 mb-3 leading-relaxed whitespace-normal">{post.excerpt}</p>
+                <p className="text-sm text-gray-500 mb-3 leading-relaxed whitespace-normal">
+                  {post.excerpt}
+                </p>
 
                 <p className="text-xs text-gray-400 mb-2">
                   {post.date} | Views {post.views} | Likes {post.likes}
                 </p>
 
-                <Link to={`/blog/${post.slug}`} className="text-[#005F87] text-sm font-medium lato-regular relative group inline-block">
+                <Link
+                  to={`/blog/${post.slug}`}
+                  className="text-[#005F87] text-sm font-medium lato-regular relative group inline-block"
+                >
                   Read More...
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#005F87] transition-all duration-300 group-hover:w-full"></span>
                 </Link>

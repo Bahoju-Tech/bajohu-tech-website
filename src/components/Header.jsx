@@ -64,7 +64,7 @@ function Header() {
 
         <Link to="/" className="shrink-0">
 
-          <img src={logo} alt="Bahoju Logo" className="h-6 w-auto sm:h-7 md:h-8" />
+          <img src={logo} alt="Bahoju Logo" className="h-4 w-auto sm:h-5 md:h-6" />
 
         </Link>
 

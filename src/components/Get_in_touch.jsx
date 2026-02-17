@@ -22,8 +22,8 @@ function Get_in_touch() {
               <FaMapMarkerAlt />
             </div>
             <div>
-              <p className="font-medium">Office Address</p>
-              <p className="text-gray-600 text-sm leading-relaxed">
+              <p className="font-medium lato-semibold">Office Address</p>
+              <p className="text-gray-600 text-sm leading-relaxed lato-regular">
                 44 Community Road, <br />
                 Off Allen Ikeja, Lagos <br />
                 Nigeria.
@@ -37,12 +37,12 @@ function Get_in_touch() {
               <FaPhoneAlt />
             </div>
             <div>
-              <p className="font-medium">Phone Number</p>
+              <p className="font-medium lato-semibold">Phone Number</p>
               <a
                 href="tel:+2380762546"
-                className="text-gray-600 text-sm hover:text-[#005F87] transition"
+                className="text-gray-600 text-sm hover:text-[#005F87] transition lato-regular"
               >
-                +238 076 2546
+                +234 807 376 2546
               </a>
             </div>
           </div>
@@ -53,10 +53,10 @@ function Get_in_touch() {
               <FaEnvelope />
             </div>
             <div>
-              <p className="font-medium">Email Address</p>
+              <p className="font-medium lato-semibold">Email Address</p>
               <a
                 href="mailto:info@bahojutech.com"
-                className="text-gray-600 text-sm hover:text-[#005F87] transition"
+                className="text-gray-600 text-sm hover:text-[#005F87] transition lato-regular"
               >
                 info@bahojutech.com
               </a>

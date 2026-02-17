@@ -15,7 +15,7 @@ function Navbar() {
 
         {/* Logo */}
         <Link to="/">
-          <img src={logo} alt="Bahoju Logo" className="h-6 sm:h-8" />
+          <img src={logo} alt="Bahoju Logo" className="h-4 sm:h-6" />
         </Link>
 
         {/* Desktop Nav */}

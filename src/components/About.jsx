@@ -156,14 +156,14 @@ function About() {
       </p>
       
 
-      <Button className="mt-6 py-3 px-6 text-white w-full sm:w-auto transition-all duration-300 hover:scale-105">
+      {/* <Button className="mt-6 py-3 px-6 text-white w-full sm:w-auto transition-all duration-300 hover:scale-105">
         Download Brochure
-      </Button>
+      </Button> */}
     </div>
   </div>
 
   {/* Trusted Partners */}
-  <div 
+  {/* <div 
     className="mt-20 lg:mt-36 transition-all duration-1000 ease-out"
     style={{
       opacity: isVisible ? 1 : 0,
@@ -181,7 +181,7 @@ function About() {
         className="mx-auto w-full max-w-5xl rounded-lg transition-all duration-300 hover:scale-105"
       />
     </div>
-  </div>
+  </div> */}
 </section>
 
   );

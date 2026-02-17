@@ -109,7 +109,7 @@ function Footer() {
               <img
                 src={logo}
                 alt="Bahoju logo"
-                className="cursor-pointer hover:opacity-80 transition"
+                className="cursor-pointer hover:opacity-80 transition w-28 h-auto max-h-14"
               />
             </Link>
           </div>
@@ -156,12 +156,12 @@ function Footer() {
 
           {/* Socials */}
           <div>
-            <h4 className="text-white mb-2">Socials</h4>
+            <h4 className="text-white mb-2 lato-semibold">Socials</h4>
             <ul className="space-y-4 text-xs">
               <li>
                 <a
                   href="https://www.instagram.com/bahojutech"
-                  className="group inline-block relative hover:text-white transition"
+                  className="group inline-block relative hover:text-white transition lato-regular"
                 >
                   Instagram
                   <span className="absolute left-0 -bottom-0.5 h-[1px] w-0 bg-white transition-all duration-300 group-hover:w-full" />
@@ -170,7 +170,7 @@ function Footer() {
               <li>
                 <a
                   href="https://www.facebook.com/bahojutech"
-                  className="group inline-block relative hover:text-white transition"
+                  className="group inline-block relative hover:text-white transition lato-regular"
                 >
                   Facebook
                   <span className="absolute left-0 -bottom-0.5 h-[1px] w-0 bg-white transition-all duration-300 group-hover:w-full" />
@@ -179,7 +179,7 @@ function Footer() {
               <li>
                 <a
                   href="https://twitter.com/bahojutech"
-                  className="group inline-block relative hover:text-white transition"
+                  className="group inline-block relative hover:text-white transition lato-regular"
                 >
                   Twitter
                   <span className="absolute left-0 -bottom-0.5 h-[1px] w-0 bg-white transition-all duration-300 group-hover:w-full" />
@@ -187,8 +187,8 @@ function Footer() {
               </li>
               <li>
                 <a
-                  href="https://wa.me/2348073762546"
-                  className="group inline-block relative hover:text-white transition"
+                  href="https://wa.me/2349045441715"
+                  className="group inline-block relative hover:text-white transition lato-regular"
                 >
                   Whatsapp
                   <span className="absolute left-0 -bottom-0.5 h-[1px] w-0 bg-white transition-all duration-300 group-hover:w-full" />
