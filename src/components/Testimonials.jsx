@@ -89,7 +89,7 @@ function Testimonials() {
 
   autoplayRef.current = setTimeout(() => {
     setActiveIndex((prev) => (prev + 1) % testimonials.length);
-  }, 8000);
+  }, 3000);
 
   return () => clearTimeout(autoplayRef.current);
 }, [activeIndex, isIdle]);
@@ -102,7 +102,7 @@ function Testimonials() {
     clearTimeout(idleTimeoutRef.current);
     idleTimeoutRef.current = setTimeout(() => {
       setIsIdle(true);
-    },10000);
+    }, 5000);
   };
 
   return (
