@@ -44,7 +44,7 @@ function Navbar() {
         </ul>
 
         {/* Desktop Contact Button */}
-        <div className="hidden lg:block">
+        <div className="hidden lg:block text-white">
           <Link to="/contact-us">
             <Button icon={<FaArrowRightLong />}>
               Contact Us

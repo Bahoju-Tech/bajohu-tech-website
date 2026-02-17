@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Navbar from "../components/Navbar";
+import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Get_in_touch from "../components/Get_in_touch";
 import axios from "axios";
@@ -12,6 +12,7 @@ function Contact_us() {
   const [inquiryType, setInquiryType] = useState("");
   const [message, setMessage] = useState("");
   const [error, setError] = useState("");
+  const [success, setSuccess] = useState("");
   const [loading, setLoading] = useState(false);
 
   const validateForm = () => {
@@ -76,6 +77,14 @@ function Contact_us() {
         setInquiryType(""),
         setMessage("");
 
+      // Show success message
+      setSuccess("Thank you for contacting us, check your mail");
+      
+      // Clear success message after 3 seconds
+      setTimeout(() => {
+        setSuccess("");
+      }, 3000);
+
       setLoading(false);
     } catch (error) {
       console.log(error);
@@ -86,9 +95,11 @@ function Contact_us() {
   };
   return (
     <div className="lato-regular">
-      <Navbar />
-
-      <section className="max-w-6xl mx-auto px-6 py-24 lato-regular">
+      <div className="fixed top-0 left-0 right-0 z-50">
+        <Header />
+      </div>
+      <div className="pt-20">
+        <section className="max-w-6xl mx-auto px-6 py-24 lato-regular">
         {/* Header */}
         <div className="text-center mb-14">
           <h1 className="text-4xl font-bold mb-4 lato-bold">Contact Us</h1>
@@ -103,6 +114,13 @@ function Contact_us() {
           <h2 className="text-xl font-semibold mb-8 lato-semibold">
             Send us a message
           </h2>
+
+          {/* Success Message */}
+          {success && (
+            <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-6">
+              {success}
+            </div>
+          )}
 
           <form className="space-y-6">
             {/* Names */}
@@ -216,6 +234,7 @@ function Contact_us() {
       <Get_in_touch />
 
       <Footer />
+      </div>
     </div>
   );
 }

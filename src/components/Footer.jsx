@@ -2,11 +2,17 @@ import { Link, useLocation } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 import Button from "./Button";
 import logo from "../assets/logo.png";
+import axios from "axios";
+import { API_URL } from "../../config";
 
 function Footer() {
   const footerRef = useRef(null);
   const [visible, setVisible] = useState(false);
   const location = useLocation();
+  const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState("");
+  const [messageType, setMessageType] = useState(""); // success or error
 
   // Animate footer on scroll into view
   // useEffect(() => {
@@ -33,6 +39,55 @@ function Footer() {
   //     window.scrollTo({ top: 0, behavior: "smooth" });
   //   }
   // };
+
+  const handleSubscribe = async (e) => {
+    e.preventDefault();
+
+    if (!email) {
+      setMessage("Please enter your email address");
+      setMessageType("error");
+      return;
+    }
+
+    // Simple email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      setMessage("Please enter a valid email address");
+      setMessageType("error");
+      return;
+    }
+
+    setLoading(true);
+    setMessage("");
+
+    try {
+      const response = await axios.post(
+        `${API_URL}/api/newsletter/subscribe`,
+        { email },
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        },
+      );
+
+      setMessage(response.data.message);
+      setMessageType("success");
+      setEmail("");
+
+      setTimeout(() => {
+        setMessage("");
+        setMessageType("");
+      }, 3000);
+    } catch (err) {
+      setMessage(
+        err.response?.data?.message || "Failed to subscribe. Please try again.",
+      );
+      setMessageType("error");
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <footer
@@ -91,7 +146,8 @@ function Footer() {
                   rel="noopener noreferrer"
                   className="group inline-block relative hover:text-white transition"
                 >
-                  44 Community Road, <br />Off Allen Ikeja
+                  44 Community Road, <br />
+                  Off Allen Ikeja
                   <span className="absolute left-0 -bottom-0.5 h-[1px] w-0 bg-white transition-all duration-300 group-hover:w-full" />
                 </a>
               </li>
@@ -103,16 +159,17 @@ function Footer() {
             <h4 className="text-white mb-2">Socials</h4>
             <ul className="space-y-4 text-xs">
               <li>
-                <a 
-                href="https://www.instagram.com/bahojutech" 
-                className="group inline-block relative hover:text-white transition">
+                <a
+                  href="https://www.instagram.com/bahojutech"
+                  className="group inline-block relative hover:text-white transition"
+                >
                   Instagram
                   <span className="absolute left-0 -bottom-0.5 h-[1px] w-0 bg-white transition-all duration-300 group-hover:w-full" />
                 </a>
               </li>
               <li>
-                <a 
-                  href="https://www.facebook.com/bahojutech" 
+                <a
+                  href="https://www.facebook.com/bahojutech"
                   className="group inline-block relative hover:text-white transition"
                 >
                   Facebook
@@ -120,8 +177,8 @@ function Footer() {
                 </a>
               </li>
               <li>
-                <a 
-                  href="https://twitter.com/bahojutech" 
+                <a
+                  href="https://twitter.com/bahojutech"
                   className="group inline-block relative hover:text-white transition"
                 >
                   Twitter
@@ -129,8 +186,8 @@ function Footer() {
                 </a>
               </li>
               <li>
-                <a 
-                  href="https://wa.me/2348073762546" 
+                <a
+                  href="https://wa.me/2348073762546"
                   className="group inline-block relative hover:text-white transition"
                 >
                   Whatsapp
@@ -141,31 +198,52 @@ function Footer() {
           </div>
 
           {/* Newsletter */}
-         <div className="">
-  <h4 className="text-white mb-2 lato-semibold">
-    Subscribe to our newsletter
-  </h4>
+          <div className="">
+            <h4 className="text-white mb-2 lato-semibold">
+              Subscribe to our newsletter
+            </h4>
 
-  <p className="text-xs mb-4 leading-relaxed lato-regular">
-    Join our community and stay connected to the future of technology
-    and urban living. Get exclusive updates on our tech services,
-    learning programs, ride solutions, and marketplace offerings.
-  </p>
+            <p className="text-xs mb-4 leading-relaxed lato-regular">
+              Join our community and stay connected to the future of technology
+              and urban living. Get exclusive updates on our tech services,
+              learning programs, ride solutions, and marketplace offerings.
+            </p>
 
-  {/* Input + Button */}
- <div className="flex justify-center gap-2">
-          <input
-            type="email"
-            placeholder="Your email address..."
-            className="flex-1 h-9 px-4 rounded-md bg-white text-gray-900 text-sm focus:outline-none"
-          />
+            {/* Input + Button */}
+            <div className="flex flex-col gap-2">
+              <div className="flex justify-center gap-2">
+                <input
+                  type="email"
+                  placeholder="Your email address..."
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="flex-1 h-9 px-4 rounded-md bg-white text-gray-900 text-sm focus:outline-none"
+                  disabled={loading}
+                />
 
-          <button className="h-9 px-4 rounded-md bg-[#0A6D8C] text-white text-sm">
-            Subscribe
-          </button>
-        </div>
-</div>
+                <button
+                  onClick={handleSubscribe}
+                  disabled={loading}
+                  className="h-9 px-4 rounded-md bg-[#0A6D8C] text-white text-sm cursor-pointer hover:bg-[#085a73] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {loading ? "Subscribing..." : "Subscribe"}
+                </button>
+              </div>
 
+              {/* Message Display */}
+              {message && (
+                <div
+                  className={`text-xs px-2 py-1 rounded ${
+                    messageType === "success"
+                      ? "bg-green-100 text-green-700"
+                      : "bg-red-100 text-red-700"
+                  }`}
+                >
+                  {message}
+                </div>
+              )}
+            </div>
+          </div>
         </div>
 
         {/* Divider */}

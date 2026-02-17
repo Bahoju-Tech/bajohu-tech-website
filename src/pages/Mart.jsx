@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Button from "../components/Button";
-import AOS from 'aos';
+import AOS from "aos";
 
 import martImage from "../assets/mart1.png";
 import martImage2 from "../assets/mockups/mart2.png";
@@ -10,17 +10,13 @@ import Why_bahoju_mart from "../components/Why_bahoju_mart";
 import { FaGooglePlay } from "react-icons/fa";
 import { FaAppStoreIos } from "react-icons/fa";
 // import { FaArrowRightLong } from "react-icons/fa";
- 
-
-
-
 
 function Mart() {
   useEffect(() => {
     AOS.init({
       duration: 1200,
       once: true,
-      offset: 100
+      offset: 100,
     });
   }, []);
 
@@ -30,67 +26,59 @@ function Mart() {
 
       {/* ================= HERO SECTION ================= */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-20 lg:py-24">
-  <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          {/* LEFT CONTENT */}
+          <div className="text-center lg:text-left">
+            <h1
+              className="text-[32px] sm:text-[40px] md:text-[48px] lg:text-[52px] font-semibold leading-tight mb-6"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              Buy. Sell. Discover <br />
+              More All in One <br />
+              Marketplace
+            </h1>
 
-    {/* LEFT CONTENT */}
-    <div className="text-center lg:text-left">
+            <p
+              className="text-gray-600 max-w-lg mx-auto lg:mx-0 mb-8 sm:mb-10 text-[14px] sm:text-[15px] md:text-[16px] leading-relaxed"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
+              A modern online marketplace built to help you buy and sell
+              anything with confidence. Whether you're a shopper looking for
+              great deals or a seller growing a business.
+            </p>
 
-      <h1 
-        className="text-[32px] sm:text-[40px] md:text-[48px] lg:text-[52px] font-semibold leading-tight mb-6"
-        data-aos="fade-up"
-        data-aos-delay="200"
-      >
-        Buy. Sell. Discover <br />
-        More All in One <br />
-        Marketplace
-      </h1>
+            {/* BUTTONS */}
+            <div
+              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center w-full"
+              data-aos="fade-up"
+              data-aos-delay="600"
+            >
+              <Button className="w-full max-w-[195px] sm:w-auto px-6 py-3 text-white font-semibold hover:scale-105 transition-transform duration-300">
+                Join the Waitlist
+              </Button>
 
-      <p 
-        className="text-gray-600 max-w-lg mx-auto lg:mx-0 mb-8 sm:mb-10 text-[14px] sm:text-[15px] md:text-[16px] leading-relaxed"
-        data-aos="fade-up"
-        data-aos-delay="400"
-      >
-        A modern online marketplace built to help you buy and sell
-        anything with confidence. Whether you're a shopper looking for
-        great deals or a seller growing a business.
-      </p>
+              <Button className="w-full max-w-[195px] sm:w-auto px-6 py-3 border border-[#005F87] text-[#005F87] hover:bg-[#005F87] text-white font-semibold hover:scale-105 transition-transform duration-300">
+                Become a Merchant
+              </Button>
+            </div>
+          </div>
 
-      {/* BUTTONS */}
-   <div 
-     className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center w-full"
-     data-aos="fade-up"
-     data-aos-delay="600"
-   >
-
-  <Button className="w-full max-w-[195px] sm:w-auto px-6 py-3 text-white font-semibold hover:scale-105 transition-transform duration-300">
-    Join the Waitlist
-  </Button>
-
-  <Button className="w-full max-w-[195px] sm:w-auto px-6 py-3 border border-[#005F87] text-[#005F87] hover:bg-[#005F87] text-white font-semibold hover:scale-105 transition-transform duration-300">
-    Become a Merchant
-  </Button>
-
-</div>
-
-
-    </div>
-
-    {/* RIGHT IMAGE */}
-    <div 
-      className="flex justify-center lg:justify-end mt-8 lg:mt-0"
-      data-aos="fade-left"
-      data-aos-delay="800"
-    >
-      <img
-        src={martImage}
-        alt="Bahoju Mart"
-        className="w-full max-w-[320px] sm:max-w-[420px] lg:max-w-md rounded-3xl object-cover hover:scale-105 transition-transform duration-500 shadow-2xl"
-      />
-    </div>
-
-  </div>
-</section>
-
+          {/* RIGHT IMAGE */}
+          <div
+            className="flex justify-center lg:justify-end mt-8 lg:mt-0"
+            data-aos="fade-left"
+            data-aos-delay="800"
+          >
+            <img
+              src={martImage}
+              alt="Bahoju Mart"
+              className="w-full max-w-[320px] sm:max-w-[420px] lg:max-w-md rounded-3xl object-cover hover:scale-105 transition-transform duration-500 shadow-2xl"
+            />
+          </div>
+        </div>
+      </section>
 
       {/* ================= HOW IT WORKS SECTION ================= */}
       <section className="px-6 pb-32">
@@ -181,7 +169,6 @@ function Mart() {
             </div>
           </div>
         </div>
-        
       </section>
 
       <Why_bahoju_mart data-aos="fade-up" data-aos-delay="2800" />
@@ -192,12 +179,12 @@ function Mart() {
           <h2 className="text-3xl md:text-4xl font-semibold mb-4">
             Download Bahoju Mart App
           </h2>
-      
+
           <p className="max-w-xl mx-auto text-gray-300 text-sm md:text-base mb-10">
-            Enjoy fast, safe, and transparent rides anytime. Download the
-            Bahoju Ride app and experience a smarter way to move.
+            Enjoy fast, secure, and seamless shopping anytime. Download the
+            Bahoju Mart app and discover a smarter way to shop.
           </p>
-      
+
           {/* store buttons */}
           <div className="flex items-center justify-center gap-6 flex-wrap">
             {/* Play Store */}
@@ -208,7 +195,7 @@ function Mart() {
                 <p className="text-sm font-semibold">Play Store</p>
               </div>
             </button>
-      
+
             {/* App Store */}
             <button className="flex items-center gap-3 bg-white text-black px-6 py-3 rounded-xl hover:opacity-90 transition hover:scale-105 transform">
               <FaAppStoreIos className="text-3xl" />

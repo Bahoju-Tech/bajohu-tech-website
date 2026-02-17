@@ -19,15 +19,19 @@ import Footer from "../components/Footer";
 function Home() {
   return (
     <div className="lato-regular">
-      <Hero />
-      <About />
-      <Values />
-      <Products />
-      <Testimonials />
-      <Portfolio />
-      <Faq />
-      <Footer />
-
+      <div className="fixed top-0 left-0 right-0 z-50">
+        <Header />
+      </div>
+      <div>
+        <Hero />
+        <About />
+        <Values />
+        <Products />
+        <Testimonials />
+        <Portfolio />
+        <Faq />
+        <Footer />
+      </div>
     </div>
   );
 }

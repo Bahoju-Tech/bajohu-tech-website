@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
 import AOS from 'aos';
 
 import phoneMockup from "../assets/mockups/frame_1.png"; 
@@ -24,7 +23,10 @@ function Ride() {
 
   return (
     <div className="lato-regular">
-      <Navbar />
+      <div className="fixed top-0 left-0 right-0 z-50">
+        <Header />
+      </div>
+      <div className="pt-20">
 
       {/* Hero Section */}
       <section className="max-w-7xl mx-auto px-6 py-24 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -118,6 +120,7 @@ function Ride() {
       <Key_features />
 
       <Footer />
+      </div>
     </div>
   );
 }

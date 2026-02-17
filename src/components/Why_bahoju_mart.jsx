@@ -8,9 +8,7 @@ function WhyBahojuMart() {
         <span className="text-sm text-gray-400 block mb-2 lato-regular">— Explore</span>
         <h2 className="text-3xl font-semibold mb-4 lato-bold">Why Bahoju Mart?</h2>
         <p className="max-w-xl  text-gray-500 text-sm lato-regular">
-          Every ride is supported by real-time tracking, verified vendors, and
-          emergency systems that create a safer, more transparent experience for
-          everyone on the platform.
+          With verified vendors, smart tracking, and built-in protection. Bahoju Mart makes online shopping simple, safe, and stress-free.
         </p>
         {/* <div className="w-6 h-[2px] bg-[#005F87] mx-auto mt-4" /> */}
       </div>

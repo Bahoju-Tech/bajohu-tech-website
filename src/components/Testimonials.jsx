@@ -153,7 +153,7 @@ function Testimonials() {
         lg:w-[140px] lg:h-[140px]
         rounded-full object-cover
         z-20
-        transition-all duration-700 ease-in-out
+        transition-all duration-100 ease-in-out
       "
     />
 

@@ -12,7 +12,7 @@ import {
 const features = [
   {
     id: 1,
-    title: "In-Drive Fare Negotiation",
+    title: "Company provided vehicles",
     icon: <FaMoneyBillWave />,
     bg: "bg-[#FFF6E8]",
   },

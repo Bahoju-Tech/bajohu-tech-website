@@ -7,13 +7,13 @@ import Contact_us from "./pages/Contact_us";
 import ScrollToTop from "./components/ScrollToTop";
 import Mart from "./pages/Mart";
 import Services from "./pages/Services";
-import axios from "axios";
+import BlogDetails from "./pages/Blog_details";
+import Explore from "./components/Explore";
 
 
 
 
 function App() {
-  
   return (
     <Router>
       <ScrollToTop />
@@ -24,6 +24,7 @@ function App() {
         <Route path="/contact-us" element={<Contact_us />} />
         <Route path="/mart" element={<Mart />} />
         <Route path="/services" element={<Services />} />
+        <Route path="/blog/:slug" element={<BlogDetails />} />
         
         
 

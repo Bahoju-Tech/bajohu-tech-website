@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import Navbar from "../components/Navbar";
+import Header from "../components/Header";
 import Button from "../components/Button";
 import Footer from "../components/Footer";
 
@@ -54,7 +54,10 @@ function Services() {
   };
   return (
     <div className="bg-black overflow-x-hidden lato-regular">
-      <Navbar />
+      <div className="fixed top-0 left-0 right-0 z-50">
+        <Header />
+      </div>
+      <div className="pt-20">
 
       {/* ================= HERO SECTION ================= */}
     <section className="relative w-full min-h-[85vh] flex items-center justify-center overflow-hidden">
@@ -774,6 +777,7 @@ function Services() {
       
 
       <Footer />
+      </div>
     </div>
   );
 }
