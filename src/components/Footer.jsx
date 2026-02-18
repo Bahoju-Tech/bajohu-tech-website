@@ -159,37 +159,35 @@ function Footer() {
           {/* Socials */}
           <div>
             <h4 className="text-white mb-4 lato-semibold">Socials</h4>
-            <div className="flex flex-col mx-[-14%]">
-              <div className="flex space-x-2 ">
-                <a
-                  href="https://www.instagram.com/bahojutech"
-                  className="text-pink-500 hover:text-pink-600 transition-colors p-2 rounded-full hover:bg-pink-50"
-                  aria-label="Follow on Instagram"
-                >
-                  <FaInstagram size={18} />
-                </a>
-                <a
-                  href="https://www.tiktok.com/@bahoju.tech"
-                  className="text-white-600  p-2 rounded-full hover:bg-gray-500"
-                  aria-label="Follow on Facebook"
-                >
-                  <FaTiktok size={18} />
-                </a>
-                <a
-                  href="https://twitter.com/bahojutech"
-                  className="text-blue-400 hover:text-blue-500 transition-colors p-2 rounded-full hover:bg-blue-50"
-                  aria-label="Follow on X"
-                >
-                  <FaTwitter size={18} />
-                </a>
-                <a
-                  href="https://wa.me/2349045441715"
-                  className="text-green-600 hover:text-green-700 transition-colors p-2 rounded-full hover:bg-green-50"
-                  aria-label="Contact on WhatsApp"
-                >
-                  <FaWhatsapp size={18} />
-                </a>
-              </div>
+            <div className="flex gap-2 justify-start lg:ml-[-15%]">
+              <a
+                href="https://www.instagram.com/bahojutech"
+                className="text-pink-500 hover:text-pink-600 transition-colors p-2 rounded-full hover:bg-pink-50"
+                aria-label="Follow on Instagram"
+              >
+                <FaInstagram size={18} />
+              </a>
+              <a
+                href="https://www.tiktok.com/@bahoju.tech"
+                className="text-white-600 p-2 rounded-full hover:bg-gray-500"
+                aria-label="Follow on TikTok"
+              >
+                <FaTiktok size={18} />
+              </a>
+              <a
+                href="https://twitter.com/bahojutech"
+                className="text-blue-400 hover:text-blue-500 transition-colors p-2 rounded-full hover:bg-blue-50"
+                aria-label="Follow on X"
+              >
+                <FaTwitter size={18} />
+              </a>
+              <a
+                href="https://wa.me/2349045441715"
+                className="text-green-600 hover:text-green-700 transition-colors p-2 rounded-full hover:bg-green-50"
+                aria-label="Contact on WhatsApp"
+              >
+                <FaWhatsapp size={18} />
+              </a>
             </div>
           </div>
 
