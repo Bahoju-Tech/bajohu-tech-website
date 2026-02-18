@@ -60,7 +60,35 @@ const BlogDetails = () => {
 
 
 
-          const mockBlog = slug === "bahoju-tech-digital-transformation" ? {
+          const mockBlog = slug === "bahoju-tech-digital-innovation-2026" ? {
+            slug: "bahoju-tech-digital-innovation-2026",
+            title: "Bahoju Tech: Leading Digital Innovation in 2026",
+            author: {
+              name: "Alex Thompson",
+              role: "Chief Technology Officer",
+              avatar: "/api/placeholder/80/80",
+            },
+            readTime: "8 min read",
+            date: "February 16, 2026",
+            views: "3.2k",
+            likes: "412",
+            heroImage: blogImg,
+            secondImage: blogImg,
+            tags: ["Digital Innovation", "Technology", "AI", "Cloud Computing"],
+            content: [
+              "As we navigate through 2026, Bahoju Tech continues to pioneer digital innovation across multiple sectors. Our comprehensive approach combines cutting-edge technology with strategic business insights to deliver transformative solutions that drive growth and efficiency.",
+              
+              "The digital landscape is evolving at an unprecedented pace, and organizations must adapt quickly to stay competitive. Bahoju Tech's integrated suite of services addresses this challenge head-on, offering scalable solutions that grow with your business.",
+              
+              "Our AI-driven applications are revolutionizing how businesses operate, from predictive analytics to automated workflows. These intelligent systems learn and adapt, providing insights that drive informed decision-making and operational excellence.",
+              
+              "Cloud computing remains at the core of our offerings, with enhanced security protocols and hybrid deployment options that give businesses the flexibility they need. Our cloud solutions ensure seamless integration with existing systems while providing the scalability required for future growth.",
+              
+              "What sets Bahoju Tech apart is our commitment to understanding each client's unique needs. We don't just provide technology; we craft comprehensive digital strategies that align with your business objectives and drive measurable results.",
+              
+              "Looking ahead, we're excited to introduce new innovations in quantum computing, edge computing, and sustainable technology solutions. These advancements will further empower businesses to tackle complex challenges and unlock new opportunities in the digital realm."
+            ],
+          } : slug === "bahoju-tech-digital-transformation" ? {
 
             slug: "bahoju-tech-digital-transformation",
 
@@ -259,25 +287,25 @@ const BlogDetails = () => {
           // Mock popular posts data
 
           const allMockPopularPosts = [
+            {
+              id: 0,
+              slug: "bahoju-tech-digital-innovation-2026",
+              title: "Bahoju Tech: Leading Digital Innovation in 2026",
+              excerpt: "Discover how Bahoju Tech is revolutionizing the tech industry...",
+              date: "February 16, 2026",
+              views: "3.2k",
+              likes: "412"
+            },
 
             {
-
               id: 1,
-
               slug: "bahoju-tech-digital-transformation",
-
               title: "Bahoju Tech's Digital Transformation Solutions",
-
               excerpt: "How Bahoju Tech helps businesses transition to digital platforms...",
-
               image: blogImg,
-
               date: "February 15, 2026",
-
               views: "2.1k",
-
               likes: "245"
-
             },
 
             {

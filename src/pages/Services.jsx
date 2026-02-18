@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import Button from "../components/Button";
 import Footer from "../components/Footer";
@@ -107,9 +108,11 @@ function Services() {
         data-aos-duration="1000"
         data-aos-delay="600"
       >
-        <Button className="px-5 py-3 text-md  md:text-base w-full sm:w-auto max-w-[220px] text-white font-bold">
-          Book a Consultation
-        </Button>
+        <Link to="/contact-us">
+          <Button className="px-5 py-3 text-md  md:text-base w-full sm:w-auto max-w-[220px] text-white font-bold">
+            Book a Consultation
+          </Button>
+        </Link>
       </div>
 
     </div>

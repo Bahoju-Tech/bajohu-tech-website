@@ -1,18 +1,18 @@
 import { useEffect, useRef, useState } from "react";
 
-import user1 from "../assets/service_img.png";
-import user2 from "../assets/institute.png";
-import user3 from "../assets/ride.png";
-import user4 from "../assets/logo.png";
-import user5 from "../assets/logo.png";
-import user6 from "../assets/logo.png";
-import user7 from "../assets/logo.png";
-import user8 from "../assets/logo.png";
+import user1 from "../assets/test_1.png";
+import user2 from "../assets/test_2.png";
+import user3 from "../assets/test_3.png";
+import user4 from "../assets/test_4.png";
+import user5 from "../assets/test_5.png";
+import user6 from "../assets/test_6.png";
+import user7 from "../assets/test_7.png";
+import user8 from "../assets/test_8.png";
 
 const testimonials = [
   {
     id: 1,
-    name: "Ifok Success",
+    name: "Ifiok Theresa",
     image: user1,
     text: "Working with Bahoju Tech has been a seamless experience. Their solutions are intuitive, reliable, and thoughtfully designed to solve real problems.",
     rating: 4,
@@ -20,7 +20,7 @@ const testimonials = [
   },
   {
     id: 2,
-    name: "Amaka Johnson",
+    name: "Sochi Johnson",
     image: user2,
     text: "The level of professionalism and innovation they bring truly makes a difference.",
     rating: 5,
@@ -44,7 +44,7 @@ const testimonials = [
   },
   {
     id: 5,
-    name: "John Doe",
+    name: "John Emmanuel",
     image: user5,
     text: "Their team is highly skilled and always goes above and beyond to meet our needs.",
     rating: 5,
@@ -52,7 +52,7 @@ const testimonials = [
   },
   {
     id: 6,
-    name: "Jane Smith",
+    name: "Tunde Micheal",
     image: user6,
     text: "Exceptional service and support. They went above and beyond to ensure our satisfaction.",
     rating: 5,
@@ -68,7 +68,7 @@ const testimonials = [
   },
   {
     id: 8,
-    name: "Emily Davis",
+    name: "Emily Nifemi",
     image: user8,
     text: "Their team is highly skilled and always goes above and beyond to meet our needs.",
     rating: 5,
@@ -124,10 +124,9 @@ function Testimonials() {
           onClick={() => handleUserSelect(index)}
           className={`
             absolute rounded-full object-cover cursor-pointer pointer-events-auto
-            transition-all duration-700 ease-in-out
             ${
               isActive
-                ? "opacity-0 scale-0"
+                ? "opacity-0"
                 : `${item.position} w-[70px] h-[70px] opacity-70`
             }
           `}
@@ -153,7 +152,6 @@ function Testimonials() {
         lg:w-[140px] lg:h-[140px]
         rounded-full object-cover
         z-20
-        transition-all duration-100 ease-in-out
       "
     />
 
@@ -176,11 +174,10 @@ function Testimonials() {
             key={item.id}
             className={`
               absolute flex flex-col items-center text-center
-              transition-all duration-500 ease-in-out
               ${
                 isActive
-                  ? "opacity-100 translate-y-0"
-                  : "opacity-0 translate-y-6 pointer-events-none"
+                  ? "opacity-100"
+                  : "opacity-0 pointer-events-none"
               }
             `}
           >

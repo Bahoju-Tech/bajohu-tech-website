@@ -55,13 +55,13 @@ function Mart() {
               data-aos="fade-up"
               data-aos-delay="600"
             >
-              <Button className="w-full max-w-[195px] sm:w-auto px-6 py-3 text-white font-semibold hover:scale-105 transition-transform duration-300">
+              {/* <Button className="w-full max-w-[195px] sm:w-auto px-6 py-3 text-white font-semibold hover:scale-105 transition-transform duration-300">
                 Join the Waitlist
-              </Button>
+              </Button> */}
 
-              <Button className="w-full max-w-[195px] sm:w-auto px-6 py-3 border border-[#005F87] text-[#005F87] hover:bg-[#005F87] text-white font-semibold hover:scale-105 transition-transform duration-300">
+              {/* <Button className="w-full max-w-[195px] sm:w-auto px-6 py-3 border border-[#005F87] text-[#005F87] hover:bg-[#005F87] text-white font-semibold hover:scale-105 transition-transform duration-300">
                 Become a Merchant
-              </Button>
+              </Button> */}
             </div>
           </div>
 
@@ -189,24 +189,24 @@ function Mart() {
           <div className="flex items-center justify-center gap-6 flex-wrap">
             {/* Play Store */}
             <button className="flex items-center gap-3 bg-white text-black px-6 py-3 rounded-xl hover:opacity-90 transition hover:scale-105 transform">
-              <FaGooglePlay className="text-3xl" />
+              <FaGooglePlay className="text-3xl" /> 
               <div className="text-left leading-tight">
                 <p className="text-[10px] ">Download on</p>
-                <p className="text-sm font-semibold">Play Store</p>
+                {/* {/* <p className="text-sm font-semibold">Coming Soon</p> */}
               </div>
             </button>
 
             {/* App Store */}
-            <button className="flex items-center gap-3 bg-white text-black px-6 py-3 rounded-xl hover:opacity-90 transition hover:scale-105 transform">
+             <button className="flex items-center gap-3 bg-white text-black px-6 py-3 rounded-xl hover:opacity-90 transition hover:scale-105 transform">
               <FaAppStoreIos className="text-3xl" />
               <div className="text-left leading-tight">
                 <p className="text-[10px] ">Download on</p>
-                <p className="text-sm font-semibold">App Store</p>
+                <p className="text-sm font-semibold">Coming Soon</p>
               </div>
             </button>
           </div>
         </div>
-      </div>
+      </div> 
       <Footer data-aos="fade-up" data-aos-delay="3200" />
     </div>
   );

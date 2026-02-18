@@ -63,21 +63,21 @@ function Ride() {
               <FaGooglePlay className="text-2xl" />
 
               <div className="flex flex-col leading-tight text-left">
-                <span className="text-xs opacity-80">Download on</span>
-                <span className="text-sm font-semibold">Play Store</span>
+                {/* <span className="text-xs opacity-80">Download on</span> */}
+                <span className="text-sm font-semibold">Coming Soon</span>
               </div>
             </button>
 
             {/* App Store */}
-            <button className="flex items-center gap-3 bg-[#005F87] text-white px-4 py-3 rounded-lg hover:opacity-90 transition hover:scale-105 transform">
-              <FaAppStoreIos className="text-3xl" />
+            <button className="flex items-center gap-3 bg-[#005F87] text-white px-5 py-3 rounded-lg hover:opacity-90 transition hover:scale-105 transform">
+              <FaAppStoreIos className="text-2xl" />
 
               <div className="flex flex-col leading-tight text-left">
-                <span className="text-xs opacity-80">
+                {/* <span className="text-xs opacity-80">
                   Download On
-                </span> 
+                </span>  */}
                 <span className="text-sm font-semibold">
-                  App Store
+                  Coming Soon
                 </span>
               </div>
             </button>

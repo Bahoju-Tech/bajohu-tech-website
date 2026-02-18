@@ -4,6 +4,8 @@ import Button from "./Button";
 import logo from "../assets/logo.png";
 import axios from "axios";
 import { API_URL } from "../../config";
+import { FaFacebook, FaTwitter, FaWhatsapp, FaInstagram } from "react-icons/fa";
+import { FaTiktok } from "react-icons/fa6";
 
 function Footer() {
   const footerRef = useRef(null);
@@ -109,7 +111,7 @@ function Footer() {
               <img
                 src={logo}
                 alt="Bahoju logo"
-                className="cursor-pointer hover:opacity-80 transition w-28 h-auto max-h-14"
+                className="cursor-pointer hover:opacity-80 transition h-6 w-auto sm:h-5 md:h-6"
               />
             </Link>
           </div>
@@ -156,45 +158,39 @@ function Footer() {
 
           {/* Socials */}
           <div>
-            <h4 className="text-white mb-2 lato-semibold">Socials</h4>
-            <ul className="space-y-4 text-xs">
-              <li>
+            <h4 className="text-white mb-4 lato-semibold">Socials</h4>
+            <div className="flex flex-col mx-[-14%]">
+              <div className="flex space-x-2 ">
                 <a
                   href="https://www.instagram.com/bahojutech"
-                  className="group inline-block relative hover:text-white transition lato-regular"
+                  className="text-pink-500 hover:text-pink-600 transition-colors p-2 rounded-full hover:bg-pink-50"
+                  aria-label="Follow on Instagram"
                 >
-                  Instagram
-                  <span className="absolute left-0 -bottom-0.5 h-[1px] w-0 bg-white transition-all duration-300 group-hover:w-full" />
+                  <FaInstagram size={18} />
                 </a>
-              </li>
-              <li>
                 <a
-                  href="https://www.facebook.com/bahojutech"
-                  className="group inline-block relative hover:text-white transition lato-regular"
+                  href="https://www.tiktok.com/@bahoju.tech"
+                  className="text-white-600  p-2 rounded-full hover:bg-gray-500"
+                  aria-label="Follow on Facebook"
                 >
-                  Facebook
-                  <span className="absolute left-0 -bottom-0.5 h-[1px] w-0 bg-white transition-all duration-300 group-hover:w-full" />
+                  <FaTiktok size={18} />
                 </a>
-              </li>
-              <li>
                 <a
                   href="https://twitter.com/bahojutech"
-                  className="group inline-block relative hover:text-white transition lato-regular"
+                  className="text-blue-400 hover:text-blue-500 transition-colors p-2 rounded-full hover:bg-blue-50"
+                  aria-label="Follow on X"
                 >
-                  Twitter
-                  <span className="absolute left-0 -bottom-0.5 h-[1px] w-0 bg-white transition-all duration-300 group-hover:w-full" />
+                  <FaTwitter size={18} />
                 </a>
-              </li>
-              <li>
                 <a
                   href="https://wa.me/2349045441715"
-                  className="group inline-block relative hover:text-white transition lato-regular"
+                  className="text-green-600 hover:text-green-700 transition-colors p-2 rounded-full hover:bg-green-50"
+                  aria-label="Contact on WhatsApp"
                 >
-                  Whatsapp
-                  <span className="absolute left-0 -bottom-0.5 h-[1px] w-0 bg-white transition-all duration-300 group-hover:w-full" />
+                  <FaWhatsapp size={18} />
                 </a>
-              </li>
-            </ul>
+              </div>
+            </div>
           </div>
 
           {/* Newsletter */}

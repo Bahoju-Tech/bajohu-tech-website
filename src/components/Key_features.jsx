@@ -112,8 +112,8 @@ function Key_features() {
       <button className="flex items-center justify-center gap-3 bg-white text-black px-6 py-3 rounded-xl hover:opacity-90 transition hover:scale-105 transform w-full sm:w-auto">
         <FaGooglePlay className="text-2xl" />
         <div className="text-left leading-tight">
-          <p className="text-[10px]">Download on</p>
-          <p className="text-sm font-semibold">Playstore</p>
+          {/* <p className="text-[10px]">Download on</p> */}
+          <p className="text-sm font-semibold">Coming Soon</p>
         </div>
       </button>
 
@@ -121,8 +121,8 @@ function Key_features() {
       <button className="flex items-center justify-center gap-3 bg-white text-black px-6 py-3 rounded-xl hover:opacity-90 transition hover:scale-105 transform w-full sm:w-auto">
         <FaAppStoreIos className="text-2xl" />
         <div className="text-left leading-tight">
-          <p className="text-[10px]">Download on</p>
-          <p className="text-sm font-semibold">Appstore</p>
+          {/* <p className="text-[10px]">Download on</p> */}
+          <p className="text-sm font-semibold">Coming Soon</p>
         </div>
       </button>
 

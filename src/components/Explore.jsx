@@ -28,7 +28,7 @@ const Explore = () => {
 
     posts: "/api/blog/posts",
 
-    categories: "/api/blog/categories/list",
+    // categories: "/api/blog/categories/list",
   };
 
   // Mock data for development/testing
@@ -192,7 +192,7 @@ const Explore = () => {
 
             fetch(API_ENDPOINTS.posts),
 
-            fetch(API_ENDPOINTS.categories),
+            // fetch(API_ENDPOINTS.categories),
 
             
           ]);
@@ -208,7 +208,7 @@ const Explore = () => {
 
             postsRes.json(),
 
-            categoriesRes.json(),
+            // categoriesRes.json(),
           ]);
 
           setFeaturedPost(featuredData);
@@ -217,7 +217,7 @@ const Explore = () => {
 
           setBlogPosts(postsData);
 
-          setCategories(categoriesData);
+          // setCategories(categoriesData);
 
 
         } catch (apiError) {
@@ -229,7 +229,7 @@ const Explore = () => {
 
           setBlogPosts(mockData.posts);
 
-          setCategories(mockData.categories);
+          // setCategories(mockData.categories);
         }
       } catch (err) {
         setError(err.message);
