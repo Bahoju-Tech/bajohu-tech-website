@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 import Button from "../components/Button";
 import AOS from "aos";
 
-import martImage from "../assets/mart1.png";
+import martImage from "../assets/mart_1.png";
 import martImage2 from "../assets/mockups/mart2.png";
 import Why_bahoju_mart from "../components/Why_bahoju_mart";
 import { FaGooglePlay } from "react-icons/fa";
@@ -191,8 +191,8 @@ function Mart() {
             <button className="flex items-center gap-3 bg-white text-black px-6 py-3 rounded-xl hover:opacity-90 transition hover:scale-105 transform">
               <FaGooglePlay className="text-3xl" /> 
               <div className="text-left leading-tight">
-                <p className="text-[10px] ">Download on</p>
-                {/* {/* <p className="text-sm font-semibold">Coming Soon</p> */}
+                {/* <p className="text-[10px] ">Download on</p> */}
+                 <p className="text-sm font-semibold">Coming Soon</p> 
               </div>
             </button>
 
@@ -200,7 +200,7 @@ function Mart() {
              <button className="flex items-center gap-3 bg-white text-black px-6 py-3 rounded-xl hover:opacity-90 transition hover:scale-105 transform">
               <FaAppStoreIos className="text-3xl" />
               <div className="text-left leading-tight">
-                <p className="text-[10px] ">Download on</p>
+                {/* <p className="text-[10px] ">Download on</p> */}
                 <p className="text-sm font-semibold">Coming Soon</p>
               </div>
             </button>

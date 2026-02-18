@@ -10,13 +10,13 @@ import { useNavigate } from "react-router-dom";
 
 import serviceBg from "../assets/service.jpg";
 
-import sBg from "../assets/service_img.png";
+import sBg from "../assets/services_1.png";
 
-import instituteBg from "../assets/institute.png";
+import instituteBg from "../assets/institute_1.png";
 
-import martBg from "../assets/mart.png";
+import martBg from "../assets/mart_1.png";
 
-import rideBg from "../assets/ride.png";
+import rideBg from "../assets/ride_1.png";
 
 import mBg from "../assets/mart_bg.jpg";
 
@@ -286,7 +286,7 @@ function Products() {
 
                         <li key={index} className="flex items-start gap-1">
 
-                          <span className="text-[#005F87] mt-1 text-xs sm:text-sm">▸</span>
+                          <span className="text-[#ffffff] mt-1 text-xs sm:text-sm">▸</span>
 
                           <span className="text-[13px] sm:text-[15px]">{service}</span>
 
@@ -438,7 +438,7 @@ function Products() {
 
                     onClick={() => item.route && navigate(item.route)}
 
-                    className="translate-x-5 translate-y-3 bg-black px-5 py-3 rounded-xl text-sm hover:bg-black/80 transition cursor-pointer flex items-center gap-3"
+                    className=" translate-y-3 bg-black px-5 py-3 rounded-xl text-sm hover:bg-black/80 transition cursor-pointer flex items-center gap-3"
 
                   >
 
