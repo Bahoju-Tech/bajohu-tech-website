@@ -38,12 +38,7 @@ function Values() {
           <div className="hidden lg:grid gap-8">
             {/* 01 - Boldness In Innovation */}
             <div 
-              className="w-full relative shadow shadow-[#fff]/40 border border-white/10 rounded-xl p-5 transition-all duration-1000 ease-out hover:scale-105 hover:shadow-[#fff]/60"
-              style={{
-                opacity: isVisible ? 1 : 0,
-                transform: isVisible ? 'translateY(0)' : 'translateY(30px)',
-                transitionDelay: '200ms'
-              }}
+              className="max-w-md relative shadow shadow-[#fff]/40 border border-white/10 rounded-xl p-5 transition-all translate-x-20 "
             >
               <span className="w-12 h-12 rounded-full bg-white text-black flex items-center justify-center font-semibold mb-[10rem] lg:mb-[7rem] transition-all duration-300 hover:scale-110">
                 01
@@ -60,7 +55,7 @@ function Values() {
 
             {/* 03 - Hunger for Excellence */}
             <div 
-              className="w-full relative shadow shadow-[#fff]/40 border border-white/10 rounded-xl p-5 transition-all duration-1000 ease-out hover:scale-105 hover:shadow-[#fff]/60"
+              className="max-w-md relative shadow shadow-[#fff]/40 border border-white/10 rounded-xl p-5 transition-all translate-x-20 "
               style={{
                 opacity: isVisible ? 1 : 0,
                 transform: isVisible ? 'translateY(0)' : 'translateY(30px)',
@@ -81,7 +76,7 @@ function Values() {
 
             {/* 06 - Urgency With Precision */}
             <div 
-              className="w-full relative shadow shadow-[#fff]/40 border border-white/10 rounded-xl p-5 transition-all duration-1000 ease-out hover:scale-105 hover:shadow-[#fff]/60"
+              className="max-w-md relative shadow shadow-[#fff]/40 border border-white/10 rounded-xl p-5 transition-all translate-x-20"
               style={{
                 opacity: isVisible ? 1 : 0,
                 transform: isVisible ? 'translateY(0)' : 'translateY(30px)',
@@ -106,7 +101,7 @@ function Values() {
           <div className="hidden lg:grid grid-cols-1 md:grid-cols-2 gap-8 lg:-ml-6">
             {/* 02 - Accountability and Ownership */}
             <div 
-              className="relative md:col-span-2 shadow shadow-[#fff]/40 border border-white/10 rounded-xl p-4 transition-all duration-1000 ease-out hover:scale-105 hover:shadow-[#fff]/60"
+              className="relative md:col-span-2 shadow shadow-[#fff]/40 border border-white/10 rounded-xl p-4 transition-all "
               style={{
                 opacity: isVisible ? 1 : 0,
                 transform: isVisible ? 'translateY(0)' : 'translateY(30px)',
@@ -128,7 +123,7 @@ function Values() {
 
             {/* 04 - Obsession With Client Success */}
             <div 
-              className="relative shadow shadow-[#fff]/40 border border-white/10 rounded-xl p-4 transition-all duration-1000 ease-out hover:scale-105 hover:shadow-[#fff]/60"
+              className="relative shadow shadow-[#fff]/40 border border-white/10 rounded-xl p-4 transition-all "
               style={{
                 opacity: isVisible ? 1 : 0,
                 transform: isVisible ? 'translateY(0)' : 'translateY(30px)',
@@ -148,7 +143,7 @@ function Values() {
 
             {/* 05 - Joy In Collaboration */}
             <div 
-              className="relative shadow shadow-[#fff]/40 border border-white/10 rounded-xl p-4 transition-all duration-1000 ease-out hover:scale-105 hover:shadow-[#fff]/60"
+              className="relative shadow shadow-[#fff]/40 border border-white/10 rounded-xl p-4 transition-all "
               style={{
                 opacity: isVisible ? 1 : 0,
                 transform: isVisible ? 'translateY(0)' : 'translateY(30px)',
@@ -168,7 +163,7 @@ function Values() {
 
             {/* 07 - Servant Leadership */}
             <div 
-              className="relative md:col-span-2 shadow shadow-[#fff]/40 border border-white/10 rounded-xl p-4 transition-all duration-1000 ease-out hover:scale-105 hover:shadow-[#fff]/60"
+              className="relative md:col-span-2 shadow shadow-[#fff]/40 border border-white/10 rounded-xl p-4 transition-all "
               style={{
                 opacity: isVisible ? 1 : 0,
                 transform: isVisible ? 'translateY(0)' : 'translateY(30px)',

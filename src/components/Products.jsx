@@ -186,11 +186,14 @@ function Products() {
 
   return (
 
-    <section id="products" className="max-w-7xl lg:mx-auto lg:px-12 sm:px-0 px-1 py-24">
+    <section id="products" className="max-w-7xl lg:mx-auto lg:px-12 sm:px-0 px-3 py-24">
 
       {/* Section header */}
 
-      {/* <span className="text-sm text-gray-400">—— Explore</span> */}
+      <div className="italic flex items-center gap-3 text-gray-400 text-lg mb-4 lg:mb-0 ">
+              <span className="w-8 h-[1px] bg-gray-300"></span>
+              Explore
+            </div>
 
       <h2 className="text-4xl font-bold mt-2 mb-10">Our Products</h2>
 
@@ -384,7 +387,7 @@ function Products() {
 
               >
 
-                {/* Overlay */}
+                {/* Overlay tone */}
 
                 <div className="absolute inset-0 bg-black/20 rounded-2xl" />
 
@@ -462,7 +465,7 @@ function Products() {
 
                     alt={item.title}
 
-                    className="w-full h-[300px] object-cover rounded-xl"
+                    className="w-full h-[400px] object-cover rounded-xl"
 
                   />
 

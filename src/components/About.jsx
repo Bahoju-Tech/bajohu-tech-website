@@ -48,9 +48,7 @@ function About() {
       transitionDelay: '200ms'
     }}
   >
-    At BAHOJU, we help brands unlock their full potential through
-    innovative, data-driven digital marketing. Our tailored strategies boost
-    visibility, engage audiences, and drive measurable growth.
+    At BAHOJU, we help brands unlock their full potential through data-driven digital marketing and innovative technologies.
   </p>
 
   {/* Mission / Vision / Mantra */}
@@ -70,7 +68,7 @@ function About() {
       <h2 className="lato-regular text-[22px] sm:text-[24px] lg:text-[28px] mt-4">
         Mission
       </h2>
-      <p className="lato-regular text-[#52525B] text-[15px] sm:text-[15px] mt-3 max-w-sm mx-auto text-balance" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+      <p className="lato-regular text-[#52525B] text-[13px] sm:text-[12px] mt-3 max-w-sm mx-auto  text-center" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
         Solving everyday challenges with tech-driven efficiency and creating
         shared wealth for the creators of tomorrow's solutions.
       </p>
@@ -91,7 +89,7 @@ function About() {
       <h2 className="lato-regular text-[22px] sm:text-[24px] lg:text-[28px] mt-4">
         Vision
       </h2>
-      <p className="lato-regular text-[#52525B] text-[14px] sm:text-[15px] mt-3 max-w-sm mx-auto text-balance" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+      <p className="lato-regular text-[#52525B] text-[13px] sm:text-[12px] mt-3 max-w-sm mx-auto text-balance text-center" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
         To establish Bahoju as the global hallmark of digital excellence,
         transforming human productivity and pioneering a future of shared
         prosperity through purposeful innovation.
@@ -113,7 +111,7 @@ function About() {
       <h2 className="lato-regular text-[22px] sm:text-[24px] lg:text-[28px] mt-4">
         Mantra
       </h2>
-      <p className="lato-regular text-[#52525B] text-[14px] sm:text-[15px] mt-3 max-w-sm mx-auto text-balance" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+      <p className="lato-regular text-[#52525B] text-[12px] sm:text-[12px] mt-3 max-w-sm mx-auto text-balance text-center" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
         Transforming lives through technology, building wealth through
         innovation.
       </p>
@@ -163,7 +161,7 @@ function About() {
   </div>
 
   {/* Trusted Partners */}
-  {/* <div 
+  <div 
     className="mt-20 lg:mt-36 transition-all duration-1000 ease-out"
     style={{
       opacity: isVisible ? 1 : 0,
@@ -181,7 +179,7 @@ function About() {
         className="mx-auto w-full max-w-5xl rounded-lg transition-all duration-300 hover:scale-105"
       />
     </div>
-  </div> */}
+  </div>
 </section>
 
   );
