@@ -98,7 +98,7 @@ const productsData = {
 
       bg: iBg,
 
-      route: "/institute", // future-ready
+      route: "/institute.bahojutech.com", // future-ready
 
     },
 
@@ -315,7 +315,13 @@ function Products() {
 
                   <button
 
-                    onClick={() => item.route && navigate(item.route)}
+                    onClick={() => {
+                      if (item.route === "/institute.bahojutech.com") {
+                        window.open("https://institute.bahojutech.com", "_blank");
+                      } else {
+                        item.route && navigate(item.route);
+                      }
+                    }}
 
                     className="lato lato-semibold bg-black px-5 py-3 rounded-xl text-sm hover:bg-black/80 transition cursor-pointer flex items-center gap-3"
 
@@ -439,7 +445,13 @@ function Products() {
 
                   <button
 
-                    onClick={() => item.route && navigate(item.route)}
+                    onClick={() => {
+                      if (item.route === "/institute.bahojutech.com") {
+                        window.open("https://institute.bahojutech.com", "_blank");
+                      } else {
+                        item.route && navigate(item.route);
+                      }
+                    }}
 
                     className=" translate-y-3 bg-black px-5 py-3 rounded-xl text-sm hover:bg-black/80 transition cursor-pointer flex items-center gap-3"
 
