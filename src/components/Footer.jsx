@@ -119,9 +119,9 @@ function Footer() {
             </Link>
             
             {/* Socials */}
-            <div className="lg:translate-y-36 lg:translate-x-245 mb-23">
-              {/* <h4 className="text-gray-500 lato-semibold mt-1 text-sm ">Follow us</h4> */}
-              <div className="flex flex-wrap gap-2">
+            <div className="lg:translate-y-5">
+              <h4 className="text-gray-500 lato-semibold mt-1 text-sm ">Follow us</h4>
+              <div className="flex flex-wrap ">
                 <a
                   href="https://www.instagram.com/bahojutech"
                   className="text-pink-500 hover:text-pink-600 transition-colors p-2 rounded-full hover:bg-pink-50"
