@@ -98,18 +98,18 @@ function Footer() {
   return (
     <footer
       ref={footerRef}
-      className={`bg-black text-gray-300 pt-20 pb-20 px-2 transition-all duration-700 ease-out
+      className={`bg-black text-gray-300 pt-8 pb-8 px-2 transition-all duration-700 ease-out
         
       `}
     >
       <div className="max-w-7xl lg:mx-auto ">
         {/* Top section */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 items-start">
           {/* Logo */}
           <div className="col-span-1">
             <Link
               to="/"
-              className="inline-block mb-6"
+              className="inline-block mb-3"
             >
               <img
                 src={logo}
@@ -195,7 +195,7 @@ function Footer() {
 
           {/* Contact Info */}
           <div className="col-span-1">
-            <h4 className="text-gray-500 mb-3">Contact Info</h4>
+            <h4 className="text-gray-500 mb-2">Contact Info</h4>
 
             <ul className="space-y-3 text-xs">
               <li>
@@ -235,7 +235,7 @@ function Footer() {
 
           {/* Quick Links */}
           <div className="col-span-1 lg:ml-[-25px]">
-            <h4 className="text-gray-500 mb-3">Quick Links</h4>
+            <h4 className="text-gray-500 mb-2">Quick Links</h4>
 
             <div className="grid grid-cols-2 gap-x-4 gap-y-3">
               {/* First Column */}
@@ -328,11 +328,11 @@ function Footer() {
 
           {/* Newsletter */}
           <div className="col-span-1">
-            <h4 className="text-gray-500 mb-3 lato-semibold">
+            <h4 className="text-gray-500 mb-2 lato-semibold">
               Subscribe to our newsletter
             </h4>
 
-            <p className="text-xs mb-4 leading-relaxed lato-regular">
+            <p className="text-xs mb-3 leading-relaxed lato-regular">
               Join our community and stay connected to the future of technology
               and urban living. Get exclusive updates on our tech services,
               learning programs, ride solutions, and marketplace offerings.
@@ -376,7 +376,7 @@ function Footer() {
         </div>
 
         {/* Divider */}
-        <div className="border-t border-gray-700 mt-14 mb-6" />
+        <div className="border-t border-gray-700 mt-8 mb-4" />
 
         {/* Bottom */}
         <p className="text-center text-sm text-gray-500">

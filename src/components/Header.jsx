@@ -76,7 +76,7 @@ function Header() {
 
           onClick={() => setMenuOpen(!menuOpen)}
 
-          className="md:hidden text-white text-2xl cursor-pointer"
+          className="md:hidden text-[#005F87] text-2xl cursor-pointer"
 
         >
 
@@ -182,7 +182,7 @@ function Header() {
 
               onClick={() => setMenuOpen(false)}
 
-              className="text-black relative group transition cursor-pointer"
+              className="text-white relative group transition cursor-pointer"
 
             >
 
@@ -198,7 +198,7 @@ function Header() {
 
               onClick={() => handleNavScroll("about-us")}
 
-              className="text-left text-black relative group transition cursor-pointer"
+              className="text-left text-white relative group transition cursor-pointer"
 
             >
 
@@ -214,7 +214,7 @@ function Header() {
 
               onClick={() => handleNavScroll("products")}
 
-              className="text-left text-black relative group transition cursor-pointer"
+              className="text-left text-white relative group transition cursor-pointer"
 
             >
 
@@ -232,7 +232,7 @@ function Header() {
 
               onClick={() => setMenuOpen(false)}
 
-              className="text-black relative group transition cursor-pointer"
+              className="text-white relative group transition cursor-pointer"
 
             >
 
@@ -254,7 +254,7 @@ function Header() {
 
               onClick={() => setMenuOpen(false)}
 
-              className="text-black relative group transition cursor-pointer"
+              className="text-white relative group transition cursor-pointer"
 
             >
 
