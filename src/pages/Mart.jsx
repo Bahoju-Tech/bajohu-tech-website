@@ -1,8 +1,10 @@
 import React, { useEffect } from "react";
 import Navbar from "../components/Navbar";
+// import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Button from "../components/Button";
 import AOS from "aos";
+
 
 import martImage from "../assets/mart_1.png";
 import martImage2 from "../assets/mockups/mart2.png";

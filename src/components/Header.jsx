@@ -56,7 +56,7 @@ function Header() {
 
   return (
 
-    <header className="bg-black w-full overflow-x-hidden">
+    <header className="bg-white w-full overflow-x-hidden">
 
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
 
@@ -92,7 +92,7 @@ function Header() {
 
           <div className="flex items-center gap-10">
 
-            <Link to="/" className="text-white hover:text-gray-300 relative group transition cursor-pointer">
+            <Link to="/" className="text-black relative group transition cursor-pointer">
 
             Home
 
@@ -106,7 +106,7 @@ function Header() {
 
             onClick={() => handleNavScroll("about-us")}
 
-            className="text-white hover:text-gray-300 relative group transition cursor-pointer"
+            className="text-black relative group transition cursor-pointer"
 
           >
 
@@ -122,7 +122,7 @@ function Header() {
 
             onClick={() => handleNavScroll("products")}
 
-            className="text-white hover:text-gray-300 relative group transition cursor-pointer"
+            className="text-black  relative group transition cursor-pointer"
 
           >
 
@@ -134,7 +134,7 @@ function Header() {
 
 
 
-          <Link to="/blog" className="text-white hover:text-gray-300 relative group transition cursor-pointer">
+          <Link to="/blog" className="text-black relative group transition cursor-pointer">
 
             Blogs
 
@@ -182,7 +182,7 @@ function Header() {
 
               onClick={() => setMenuOpen(false)}
 
-              className="text-white relative group transition cursor-pointer"
+              className="text-black relative group transition cursor-pointer"
 
             >
 
@@ -198,7 +198,7 @@ function Header() {
 
               onClick={() => handleNavScroll("about-us")}
 
-              className="text-left text-white relative group transition cursor-pointer"
+              className="text-left text-black relative group transition cursor-pointer"
 
             >
 
@@ -214,7 +214,7 @@ function Header() {
 
               onClick={() => handleNavScroll("products")}
 
-              className="text-left text-white relative group transition cursor-pointer"
+              className="text-left text-black relative group transition cursor-pointer"
 
             >
 
@@ -232,7 +232,7 @@ function Header() {
 
               onClick={() => setMenuOpen(false)}
 
-              className="text-white relative group transition cursor-pointer"
+              className="text-black relative group transition cursor-pointer"
 
             >
 
@@ -254,7 +254,7 @@ function Header() {
 
               onClick={() => setMenuOpen(false)}
 
-              className="text-white relative group transition cursor-pointer"
+              className="text-black relative group transition cursor-pointer"
 
             >
 
