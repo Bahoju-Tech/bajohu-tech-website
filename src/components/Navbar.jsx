@@ -11,7 +11,7 @@ function Navbar() {
 
   return (
     <header className="bg-black w-full">
-      <div className="relative flex items-center justify-between p-4 sm:p-6 max-w-7xl mx-auto">
+      <div className="relative flex items-center justify-between px-6 py-4 max-w-7xl mx-auto">
 
         {/* Logo */}
         <Link to="/">
