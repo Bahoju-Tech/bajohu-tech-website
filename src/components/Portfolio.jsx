@@ -4,9 +4,25 @@ import portfolioImg from "../assets/ecosystem.png";
 
 import { FaArrowRight } from "react-icons/fa";
 
-
-
 function Portfolio() {
+
+  const handleDownloadPortfolio = () => {
+    try {
+      // Open portfolio PDF in new tab
+      const pdfUrl = '/Bahoju Portfolio.pdf';
+      window.open(pdfUrl, '_blank');
+      
+      // Also try to trigger download
+      const link = document.createElement('a');
+      link.href = pdfUrl;
+      link.download = 'Bahoju-Portfolio.pdf';
+      link.target = '_blank';
+      link.click();
+      
+    } catch (error) {
+      console.error('Download error:', error);
+    }
+  };
 
   return (
 
@@ -46,7 +62,10 @@ function Portfolio() {
             </p>
 
             {/* Button - Desktop absolute, Mobile normal */}
-            <button className="inline-flex items-center gap-2 bg-[#0A6D8C] hover:bg-[#095c75] transition-all duration-300 text-white text-xs px-6 py-3 lg:px-4 lg:py-2 rounded-xl font-medium lg:absolute lg:top-56 lg:left-0 lg:translate-x-10 lg:-translate-y-45">
+            <button 
+              onClick={handleDownloadPortfolio}
+              className="inline-flex items-center gap-2 bg-[#0A6D8C] hover:bg-[#095c75] transition-all duration-300 text-white text-xs px-6 py-3 lg:px-4 lg:py-2 rounded-xl font-medium lg:absolute lg:top-56 lg:left-0 lg:translate-x-10 lg:-translate-y-45"
+            >
               View Portfolio
               <FaArrowRight />
             </button>

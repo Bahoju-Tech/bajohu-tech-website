@@ -11,6 +11,24 @@ import Button from "./Button";
 function About() {
   const [isVisible, setIsVisible] = useState(false);
 
+  const handleDownloadBrochure = () => {
+    try {
+      // Simple approach - open PDF in new tab
+      const pdfUrl = '/Bahoju Brouchure.pdf';
+      window.open(pdfUrl, '_blank');
+      
+      // Also try to trigger download
+      const link = document.createElement('a');
+      link.href = pdfUrl;
+      link.download = 'Bahoju-Brochure.pdf';
+      link.target = '_blank';
+      link.click();
+      
+    } catch (error) {
+      console.error('Download error:', error);
+    }
+  };
+
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -154,9 +172,12 @@ function About() {
       </p>
       
 
-      {/* <Button className="mt-6 py-3 px-6 text-white w-full sm:w-auto transition-all duration-300 hover:scale-105">
+       <Button 
+        onClick={handleDownloadBrochure}
+        className="mt-6 py-3 px-6 text-white w-full sm:w-auto transition-all duration-300 hover:scale-105"
+      >
         Download Brochure
-      </Button> */}
+      </Button> 
     </div>
   </div>
 
